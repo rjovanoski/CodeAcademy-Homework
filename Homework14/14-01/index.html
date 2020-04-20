@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework14_01</title>
+</head>
+<body>
+  
+
+  <script>
+
+    /*var JohnWeight = 85;
+    var JohnHeight = 1.9;
+  
+    var MarkWeight = 90;
+    var MarkHeight = 1.8;
+  
+    var bmiJohn = JohnWeight / (JohnHeight * JohnHeight);
+    var bmiMark = MarkWeight / (MarkHeight * MarkHeight);
+  
+    console.log(bmiJohn , bmiMark);
+  
+    
+      if (bmiJohn > bmiMark){
+      console.log ("John has higher BMI");
+      }
+      else if (bmiJohn === bmiMark){
+        console.log ("Mark and John have same BMI" );
+      }
+      if (bmiJohn < bmiMark){
+        console.log ("John has higher BMI");
+      }*/
+  
+      var John = {
+        name:"John", 
+        mass:"85", 
+        height:"1.9",
+        BMI: function(){
+          this.BMI = this.mass / (this.height * this.height);
+        }
+      };
+
+      John.BMI();
+      
+
+     /* John.BMI = John.mass / (John.height * John.height);*/
+      
+
+      var Mark = {
+        name:"Mark", 
+        mass:"90", 
+        height:"1.8",
+        BMI: function(){
+          this.BMI = this.mass / (this.height * this.height);
+        }
+      };
+
+      Mark.BMI();
+      
+      /*console.log(John, Mark);*/
+
+      if (John.BMI > Mark.BMI){
+        console.log (John, Mark);
+        console.log ("John has the higher BMI")
+      } else if (John.BMI < Mark.BMI){
+        console.log (John, Mark);
+        console.log ("Mark has the higher BMI");
+      }if (John.BMI === Mark.BMI){
+        console.log (John, Mark);
+        console.log ("John and Mark have the same BMI");
+      }
+
+      
+/*
+      var bmiJohn = (John.mass / (John.height * John.height));
+      var bmiMark = (Mark.mass / (Mark.height * Mark.height));*/
+
+      /*console.log(John, Mark);
+      console.log("John's BMI is :" + [bmiJohn], "Mark's BMI is :" + [bmiMark]);*/
+
+  </script>
+
+
+
+</body>
+</html>
+
+

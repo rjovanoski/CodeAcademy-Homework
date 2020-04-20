@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework14_02</title>
+</head>
+<body>
+
+
+    <script>
+     
+        var John = {
+            bills : [ 124, 48, 268, 180, 42],
+            tips : [],
+            totalbills : [],
+            Calculator : function (){
+                for ( var i = 0; i < this.bills.length; i++){
+                    var percentage;
+                    if (this.bills[i] < 50){
+                        percentage = this.bills[i] * 0.2;
+                    }else if (this.bills[i] >= 50 && this.bills[i] <= 200){
+                        percentage = this.bills[i] * 0.15;
+                    }else {
+                        percentage = this.bills[i] * 0.1;
+                    }
+                    this.tips.push(percentage);
+                    this.totalbills.push(this.bills[i] + percentage);
+                }
+            }
+        }
+
+        John.Calculator();
+
+        console.log(John.bills, John.tips, John.totalbills);
+        
+
+        var Mark = {
+            bills : [ 77, 375, 110, 45],
+            tips : [],
+            totalbills : [],
+            Calculator : function (){
+                for ( var i = 0; i < this.bills.length; i++){
+                    var percentage;
+                    if (this.bills[i] < 100){
+                        percentage = this.bills[i] * 0.2;
+                    }else if (this.bills[i] >= 100 && this.bills[i] <= 300){
+                        percentage = this.bills[i] * 0.1;
+                    }else {
+                        percentage = this.bills[i] * 0.25;
+                    }
+                    this.tips.push(percentage);
+                    this.totalbills.push(this.bills[i] + percentage);
+                }
+            }
+        };
+
+        Mark.Calculator();
+ 
+        console.log(Mark.bills, Mark.tips, Mark.totalbills);
+
+        var JohnsTips = John.tips;
+        var MarksTips = Mark.tips;
+
+
+        function AvarageTips(tips){
+            var sum = 0;
+            for (i = 0; i < tips.length; i++){
+                sum += tips[i];
+            }
+            /*console.log("total tips amount is " + sum);*/
+                var avg = sum / tips.length;
+
+            return "average tips amount is " + avg;
+        };
+
+        console.log("John's:");
+        console.log(AvarageTips(John.tips));
+        console.log("Mark's:");
+        console.log(AvarageTips(Mark.tips));
+
+
+        if (AvarageTips(JohnsTips) > AvarageTips(MarksTips)){
+            console.log("John has heigher avarage tips");    
+        }else if (AvarageTips(JohnsTips) < AvarageTips(MarksTips)){
+            console.log("Mark has heigher avarage tips");
+        }else {
+            console.log("John's and Mark's avarage tips are equal");
+        }
+
+
+
+    </script>
+    
+</body>
+</html>

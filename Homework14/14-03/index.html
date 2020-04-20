@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework14_03</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container py-3">
+        <form>
+            <div class="flex d-flex">
+                <select class="custom-select col-md-2" id="select">
+                    <option value="" selected>Choose...</option>
+                        <option value="John">John</option>
+                            <option value="Rob">Rob</option>
+                                <option value="Jane">Jane</option>
+                </select>
+                    <div>
+                        <button class="btn btn-primary ml-3" type="button" id="load-data">Load Data</button>
+                    </div>
+            </div>
+                <div class="form-group">
+                    <label for="fname" class="col-md-2">First Name</label>
+                        <input type="text" class="col-md-2 form-control" id="fname" placeholder="">
+                </div>
+                    <div class="form-group">
+                        <label for="lname" class="col-md-2">Last Name</label>
+                            <input type="text" class="col-md-2 form-control" id="lname" placeholder="">
+                    </div>
+                        <div class="form-group">
+                            <label for="website" class="col-md-2">Web Site</label>
+                                <input type="text" class="col-md-2 form-control" id="website" placeholder="">
+                        </div>
+                            <div class="form-group">
+                                <label for="phonenumber" class="col-md-2 col-form-label">Phone Number</label>
+                                    <input type="tel" class="col-md-2 form-control" id="phonenumber" placeholder="">        
+                            </div>
+                                <div class="form-group">
+                                    <label for="email" class="col-md-2 col-form-label">Email</label>
+                                        <input type="text" class="col-md-2 form-control" id="email" placeholder="">
+                                </div>
+        </form>
+    </div>
+
+
+    <script>
+
+        var John = {
+            firstname: "John",
+            lastname: "Smith",
+            website: "https://www.john.com",
+            phonenumber: "111-111-111",
+            email: "john@gmail.com"
+        };
+
+        var Rob = {
+            firstname: "Rob",
+            lastname: "Robinson",
+            website: "https://www.rob.com",
+            phonenumber: "222-222-222",
+            email: "rob@gmail.com"
+        };
+
+        var Jane = {
+            firstname: "Jane",
+            lastname: "Smith",
+            website: "https://www.jane.com",
+            phonenumber: "333-333-333",
+            email: "jane@gmail.com"
+        };
+
+        var users = [John, Rob, Jane];
+        var select = document.getElementById("select");
+        var inputs = document.getElementsByTagName("input");
+        var button = document.getElementById("load-data"); 
+        
+        button.addEventListener("click", loadUserData);
+
+
+        function loadUserData (){
+            
+            var selectedUser = select.value;
+            
+            console.log(selectedUser);
+
+            if  (!selectedUser){
+                
+                for ( var i=0; i<inputs.length; i++) {
+                    
+                    inputs[i].value = "";
+                }
+            
+            }for (var i = 0; i < users.length; i++){
+                
+                if  (users[i].firstname === selectedUser){
+                    inputs[0].value = users[i].firstname;
+                    inputs[1].value = users[i].lastname;
+                    inputs[2].value = users[i].website;
+                    inputs[3].value = users[i].phonenumber;
+                    inputs[4].value = users[i].email;
+                }
+            }
+        }
+  
+       
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
