@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework15_Shopping_List</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container">
+
+    </div>
+
+    <script>
+
+
+        var container = document.querySelector(".container");
+        
+        var heading = document.createElement('h3');
+        heading.className = "mb-3 mt-3 text-primary";
+        heading.innerHTML = "My Shopping List";
+
+        var form = document.createElement('form');
+        form.className = "form-inline";
+        
+        var label = document.createElement('label');
+        label.className = "col-form-label font-weight-bold";
+        label.innerHTML = "New Product :";
+
+        var inputElement = document.createElement('input');
+        inputElement.className = "form-control m-3";
+        inputElement.setAttribute('type', "text");
+        
+        var myButton = document.createElement('button');
+        myButton.className = "btn btn-primary ml-3";
+        myButton.setAttribute('type', "button",);
+        myButton.setAttribute('id', "load-data")
+        myButton.textContent = "Add Products";
+
+        container.appendChild(heading);
+        container.appendChild(form);
+
+        form.appendChild(label);
+        form.appendChild(inputElement);
+        form.appendChild(myButton);
+
+        myButton.addEventListener('click', loadData);
+       
+        function loadData (){
+            
+            var listDiv = document.createElement('div');
+            listDiv.className = "flex d-flex";
+
+            var list = document.createElement('ul');
+            list.className = "list-group col-md-5";
+
+            var products = document.createElement('li');
+            products.className = "list-group-item active text-white mt-3";
+            products.textContent = inputElement.value;
+
+            var deleteButton = document.createElement('button');
+            deleteButton.className = "btn btn-danger btn-sm float-right";
+            deleteButton.setAttribute = ('type', "button");
+            deleteButton.textContent = "Delete Product";
+
+            container.appendChild(listDiv);
+            listDiv.appendChild(list);
+            list.appendChild(products);
+            products.appendChild(deleteButton);
+
+            deleteButton.addEventListener('click', deleteLoadData);
+
+            function deleteLoadData(){
+
+                container.removeChild(listDiv);
+                
+            }   
+            
+        };  
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+   
+
+
+</body>
+</html>
