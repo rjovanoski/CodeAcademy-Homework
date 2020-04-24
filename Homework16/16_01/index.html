@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+       
+    <div class="container">
+
+    </div>
+
+   
+    <script>
+
+
+        var container = document.querySelector('.container');
+        
+        var jumbotron = document.createElement('div');
+        jumbotron.className = "jumbotron m-3";
+
+        var form = document.createElement('form');
+        form.className = "text-center";
+
+        var h2 = document.createElement('h2');
+        h2.innerHTML = "FORM";
+
+        var hr = document.createElement('hr');
+
+        var select = document.createElement('select');
+        select.className = "custom-select mr-sm-2 mt-3";
+
+        var optionSelected = document.createElement('option');
+        optionSelected.setAttribute('value', "disabled");
+        optionSelected.innerHTML = "Select Class";
+        
+        var optionPrimary = document.createElement('option');
+        optionPrimary.setAttribute('value', "primary");
+        optionPrimary.innerHTML = "Primary";
+
+        var optionSecondary = document.createElement('option');
+        optionSecondary.setAttribute('value', "secondary");
+        optionSecondary.innerHTML = "Secondary";
+
+        var optionSuccess = document.createElement('option');
+        optionSuccess.setAttribute('value', "success");
+        optionSuccess.innerHTML = "Success";
+
+        var optionDanger = document.createElement('option');
+        optionDanger.setAttribute('value', "danger");
+        optionDanger.innerHTML = "Danger";
+
+        var optionWarning = document.createElement('option');
+        optionWarning.setAttribute('value', "warning");
+        optionWarning.innerHTML = "Warning";
+
+        var optionInfo = document.createElement('option');
+        optionInfo.setAttribute('value', "info");
+        optionInfo.innerHTML = "Info";
+
+        var optionDark = document.createElement('option');
+        optionDark.setAttribute('value', "dark");
+        optionDark.innerHTML = "Dark";
+
+        var button = document.createElement('button');
+        button.className = "btn btn-block border border-dark mt-5";
+        button.setAttribute('disabled', "");
+        button.innerHTML = "BUTTON";
+
+        container.appendChild(jumbotron);
+        jumbotron.appendChild(form);
+        form.appendChild(h2);
+        form.appendChild(hr);
+        jumbotron.appendChild(select);
+        select.appendChild(optionSelected);
+        select.appendChild(optionPrimary);
+        select.appendChild(optionSecondary);
+        select.appendChild(optionSuccess);
+        select.appendChild(optionDanger);
+        select.appendChild(optionWarning);
+        select.appendChild(optionInfo);
+        select.appendChild(optionDark);
+        jumbotron.appendChild(button);
+
+        var select = document.querySelector('select');
+        select.addEventListener('change', changeButtonType);
+
+        function changeButtonType(){
+
+            var button = document.querySelector("button");
+            var selectedOption = this.value;            
+
+            if (selectedOption === "disabled"){
+
+                button.setAttribute("disabled", "");
+                               
+                console.log(button);
+
+            }   else {
+
+                    button.removeAttribute("disabled");
+                    button.setAttribute("class", "btn btn-block border border-dark mt-5 text-uppercase btn-" + selectedOption)
+                    button.innerHTML = selectedOption;
+                
+                    console.log(button);
+                }
+        }
+
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+</body>
+</html>
