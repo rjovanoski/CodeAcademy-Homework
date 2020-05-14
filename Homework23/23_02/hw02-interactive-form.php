@@ -13,10 +13,10 @@
 <?php
 
     echo "<h3>Favorite City</h3>";
-    
-    $city = $_POST['city'];
-    
+            
     if (isset($_POST['city'])): {
+
+        $city = $_POST['city'];
        
         echo "Your favorite city is: " . $city;
 

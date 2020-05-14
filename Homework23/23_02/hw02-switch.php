@@ -12,9 +12,9 @@
 
     echo "<h3>Pick a Day</h3>";
  
-    $day = $_POST['day'];
-
     if (isset($_POST['day'])): {
+
+        $day = $_POST['day'];
         
         switch ($day) {
             case 'Monday':
