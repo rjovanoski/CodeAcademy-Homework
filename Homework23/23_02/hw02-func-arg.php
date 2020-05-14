@@ -14,9 +14,9 @@
 
     $inputArr = [
 
-    $_POST['city'],
-    $_POST['month'],
-    $_POST['year']
+        $_POST['city'],
+        $_POST['month'],
+        $_POST['year']
 
     ];
 
@@ -26,7 +26,9 @@
         echo "In " . ucfirst($inputArr[0]) . " in the month of " . ucfirst($inputArr[1]) . " " . $inputArr[2] . ", you observed the following weather: ";
              
         foreach ($_POST['weather'] as $value) {
+
             echo "<li>" . ucfirst($value) . "</li>";
+
         };
 
 ?>
@@ -80,7 +82,7 @@
 
 <?php
 
-endif;
+    endif;
 
 ?>
 
