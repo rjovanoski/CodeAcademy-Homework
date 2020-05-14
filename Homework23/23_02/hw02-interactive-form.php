@@ -16,8 +16,12 @@
     
     $city = $_POST['city'];
     
-    if (isset($_POST['city'])):
+    if (isset($_POST['city'])): {
+       
         echo "Your favorite city is: " . $city;
+
+    };
+
 ?> 
 
 <?php
@@ -36,7 +40,7 @@
         
 <?php
 
-    endif
+    endif;
 
 ?>
 

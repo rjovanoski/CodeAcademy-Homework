@@ -12,24 +12,37 @@
 
     echo "<h3>How's your weather?</h3>";
 
-    $inputArr = [
+    $checkBox = ["Sunshine", "Clouds", "Rain", "Hail", "Sleet", "Snow", "Wind", "Cold", "Heat" ];
 
-        $_POST['city'],
-        $_POST['month'],
-        $_POST['year']
+    function showCheckBox($checkBox){
 
-    ];
-
+        for($i = 0; $i < count($checkBox); $i++){
     
-    if (isset($_POST['city']) && isset($_POST['month']) && isset($_POST['year'])):
+            echo '<input type="checkbox" name="weather[]" value=" '.$checkBox[$i].' ">';
+    
+            echo '<label for=" '.$checkBox[$i].' "> ' .$checkBox[$i]. '</label><br>';
+    
+        }
+
+    };
+ 
+    if (isset($_POST['city']) && isset($_POST['month']) && isset($_POST['year'])):{
+
+        $inputArr = [
+
+            $_POST['city'],
+            $_POST['month'],
+            $_POST['year']
+    
+        ];
 
         echo "In " . ucfirst($inputArr[0]) . " in the month of " . ucfirst($inputArr[1]) . " " . $inputArr[2] . ", you observed the following weather: ";
              
         foreach ($_POST['weather'] as $value) {
 
             echo "<li>" . ucfirst($value) . "</li>";
-
-        };
+        }    
+    };
 
 ?>
 <?php
@@ -58,26 +71,12 @@
             <p>Choose all that apply</p>
                 
 <?php
-
-    $checkBox = ["Sunshine", "Clouds", "Rain", "Hail", "Sleet", "Snow", "Wind", "Cold", "Heat" ];
-
-        function showCheckBox($checkBox){
-
-            for($i = 0; $i < count($checkBox); $i++){
-        
-                echo '<input type="checkbox" name="weather[]" value=" '.$checkBox[$i].' ">';
-        
-                echo '<label for=" '.$checkBox[$i].' "> ' .$checkBox[$i]. '</label><br>';
-        
-            }
-
-        };
-        
-        showCheckBox($checkBox);
+       
+    showCheckBox($checkBox);
         
 ?>
 
-        <button type="submit" class="btn btn-primary">GO</button>
+            <button type="submit" class="btn btn-primary">GO</button>
     </form>
 
 <?php

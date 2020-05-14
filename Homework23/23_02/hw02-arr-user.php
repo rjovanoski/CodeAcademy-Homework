@@ -12,15 +12,15 @@
 
     echo "<h3>How's your weather?</h3>";
 
-    $inputArr = [
+    if (isset($_POST['city']) && isset($_POST['month']) && isset($_POST['year'])):{
+
+        $inputArr = [
         
-        $_POST['city'],
-        $_POST['month'],
-        $_POST['year']
-
-    ];
-
-    if (isset($_POST['city']) && isset($_POST['month']) && isset($_POST['year'])):
+            $_POST['city'],
+            $_POST['month'],
+            $_POST['year']
+    
+        ];
 
         echo "In " . ucfirst($inputArr[0]) . " in the month of " . ucfirst($inputArr[1]) . " " . $inputArr[2] . ", you observed the following weather: ";
              
@@ -28,7 +28,8 @@
             
             echo "<li>" . ucfirst($value) . "</li>";
 
-        };
+        }
+    };
     
 ?>
 
