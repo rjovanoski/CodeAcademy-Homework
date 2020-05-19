@@ -3,6 +3,14 @@
 
 //if session variable 'counter' not exist create it and set to 1, if it exist increase it by 1
 
+session_start();
+
+if (!isset($_SESSION['counter'])) {
+    $_SESSION['counter'] = 1;
+}else {
+    $_SESSION['counter'] = $_SESSION['counter'] += 1;
+}
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
