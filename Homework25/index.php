@@ -113,6 +113,4 @@ if ($footer) {
 ?>
 
 </body>
-
->>>>>>> 1702b7b0f7ff6e56a4dbecefa98b1b4f3383e842
 </html>
