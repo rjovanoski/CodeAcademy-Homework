@@ -3,8 +3,8 @@
 if (isset($_POST['firstname']) && isset($_POST['lastname'])) {
     
     $host = 'localhost';
-    $user = 'predator';
-    $pass = 'Marko';
+    $user = '';
+    $pass = '';
     $db = 'crud_app';
  
     $link = mysqli_connect($host, $user, $pass, $db);
@@ -26,8 +26,8 @@ if (isset($_POST['firstname']) && isset($_POST['lastname'])) {
 if (isset($_GET['id'])) {
     
     $host = 'localhost';
-    $user = 'predator';
-    $pass = 'Marko';
+    $user = '';
+    $pass = '';
     $db = 'crud_app';
  
     $link = mysqli_connect($host, $user, $pass, $db);
