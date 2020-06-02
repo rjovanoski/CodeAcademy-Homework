@@ -1,8 +1,8 @@
 <?php
 
 $host = 'localhost';
-$user = 'predator';
-$pass = 'Marko';
+$user = '';
+$pass = '';
 $db = 'crud_app';
  
  
