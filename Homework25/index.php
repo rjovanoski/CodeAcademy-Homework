@@ -1,7 +1,12 @@
 <?php
 
 if (isset($_GET['page'])) {
+    
     $page = $_GET['page'];
+}
+
+if (isset($_GET['title'])) {
+    
     $title = $_GET['title'];
 }
 
@@ -63,7 +68,7 @@ if (!empty($page)) {
     <script src="https://unpkg.com/scrollreveal"></script>
     <script defer src="assets/js/script.js"></script>
 
-    <title><?php echo $title ?></title>
+    <title><?php echo $title; ?></title>
     <style>
     </style>
 </head>
@@ -96,6 +101,7 @@ if (!empty($page)) {
     }
 
 }else {
+    
     include 'pages/index.page.php';
 }
 
