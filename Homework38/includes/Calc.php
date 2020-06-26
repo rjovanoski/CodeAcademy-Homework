@@ -17,7 +17,6 @@ class Calc {
 	}
 
 	public function calcMethod() {
-
 		
 		switch ($this->calc) {
 			case 'add':
@@ -33,18 +32,8 @@ class Calc {
 				
 				break;
 		}
-
 		return $result;
-
 	}
-
 }
 
 ?>
- 
-
-
-
-
-
-
