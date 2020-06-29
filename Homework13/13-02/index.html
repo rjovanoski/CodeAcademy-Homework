@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homework13_02_Radoslav_Jovanoski</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+<body>
+    <div class="container col-md-6 py-3">
+      <div class="card">
+        <h2 class="card-header">User Information</h2>
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="firstname">First Name</label>
+                  <input type="text" class="form-control" id="firstname" name="firstname">
+              </div>
+                <div class="form-group">
+                  <label for="lastname">Last Name</label>
+                    <input type="text" class="form-control" id="lastname" name="lastname">
+                </div>
+                  <div class="form-group">
+                    <label for="email">Email Address</label>
+                      <input type="email" class="form-control" id="email" name="email">
+                  </div>
+                    <div class="form-group">
+                      <label for="company">Company</label>
+                        <input type="text" class="form-control" id="company">
+                    </div>
+                      <div class="form-group">
+                        <label for="website">Website</label>
+                          <input type="text" class="form-control" id="website">
+                      </div>
+                        <div class="form-group">
+                          <label for="timezone">Time Zone</label>
+                            <select class="custom-select" id="time-zone">
+                              <option selected disabled value="">Choose...</option>
+                                <option>Central America Standard Time 	(UTC-06:00) 	Central America</option>
+                                <option>Eastern Standard Time 	(UTC-05:00) 	Eastern Time (US & Canada)</option>
+                                <option>SA Western Standard Time 	(UTC-04:00) 	Georgetown, La Paz, Manaus, San Juan</option>
+                                <option>Montevideo Standard Time 	(UTC-03:00) 	Montevideo</option>
+                                <option>UTC-02 	(UTC-02:00) 	Coordinated Universal Time-02</option>
+                                <option>Standard Time 	(UTC) 	Dublin, Edinburgh, Lisbon, London</option>
+                                <option>Central European Standard Time 	(UTC+01:00) 	Sarajevo, Skopje, Warsaw, Zagreb</option>
+                                <option>South Africa Standard Time 	(UTC+02:00) 	Harare, Pretoria</option>
+                                <option>E. Africa Standard Time 	(UTC+03:00) 	Nairobi</option>
+                                <option>Mauritius Standard Time 	(UTC+04:00) 	Port Louis</option>
+                                <option>Pakistan Standard Time 	(UTC+05:00) 	Islamabad, Karachi</option>
+                            </select>
+                        </div>
+                          <div class="form-group">
+                            <label for="uname">Username</label>
+                              <input type="text" class="form-control" id="uname" name="uname">
+                          </div>
+                            <div class="form-group">
+                              <label for="pwd">Password</label>
+                                <input type="password" class="form-control" id="pwd" name="password">
+                                  <small class="text-muted">Your password must be 8-20 characters long, 
+                                                            contain letters and numbers, and must not contain spaces, special characters or emoji.</small>
+                            </div>
+                              <div class="form-group">
+                                <label for="pwd2">Confirm</label>
+                                  <input type="password" class="form-control" id="pwd2" name="password">
+                              </div>
+                                <button type="reset" class="btn btn-secondary">Cancel</button>
+                                  <button type="button" class="btn btn-primary" id="click-button">Submit</button>
+            </form>
+          </div>
+      </div>
+    </div>
+
+
+    <script>
+
+      var button = document.getElementById('click-button');
+
+      var select = document.getElementById('time-zone');
+
+      var inputs = document.getElementsByTagName('input');
+
+      button.addEventListener("click", ClickMe);
+
+
+      function ClickMe(){
+
+        for (var i=0; i < inputs.length; i++)
+          
+          console.log(inputs[i].value);
+          console.log(select.value);
+                          
+      }
+      
+
+/*
+      function ClickMe(){
+        var elements = [
+          inputs[0].value,
+          inputs[1].value,
+          inputs[2].value,
+          inputs[3].value,
+          inputs[4].value,
+          inputs[5].value,
+          inputs[6].value,
+          inputs[7].value,
+          select.value 
+        ];
+          console.log(elements);
+
+      }
+
+
+
+     /* var firstname = document.getElementById("firstname");
+      var lastname = document.getElementById("lastname");
+      var e_mail = document.getElementById("email");
+      var companyname = document.getElementById("company");
+      var website = document.getElementById("website");
+      var timezone = document.getElementById("time-zone");
+      var username = document.getElementById("uname");
+      var password = document.getElementById("pwd");
+      var confirm_password = document.getElementById("pwd2");
+      var clickbutton = document.getElementById('click-button');
+
+      
+      clickbutton.addEventListener('click', ClickMe);
+
+      function ClickMe() {
+        var name = firstname.value;
+        if (name = firstname.value){
+          console.log(name);
+        }
+        else {
+          console.log('User did\'t Enter First Name');
+        }
+
+        var lname = lastname.value;
+        if (lname = lastname.value){
+          console.log(lname);
+        }
+        else {
+          console.log('User did\'t Enter Last Name');
+        }
+
+        var e_mail = email.value;
+        if (e_mail = email.value){
+          console.log(e_mail);
+        }
+        else {
+          console.log('User did\'t Enter Email');
+        }
+
+        var companyname = company.value;
+        if (companyname = company.value){
+          console.log(companyname);
+        }
+        else {
+          console.log('User did\'t Enter Company Name');
+        }
+
+        var web_site = website.value;
+        
+        if (web_site = website.value){
+          console.log(web_site);
+        }
+        else {
+          console.log('User did\'t Enter WebSite');
+        }
+
+        var tzone = timezone.value;
+        if (tzone = timezone.value){
+          console.log(tzone);
+        }
+        else {
+          console.log('User did\'t Enter TimeZone');
+        }
+
+        var user = username.value;
+        if (user = username.value){
+          console.log(user);
+        }
+        else {
+          console.log('User did\'t Enter User');
+        }
+        
+        var psw = password.value;
+        if (psw = password.value){
+        console.log('User Entered Password');
+        }
+        else {
+          console.log('User did\'t Enter Password');
+        }
+
+        var confirm_psw = confirm_password.value;
+        if (confirm_psw = confirm_password.value){
+        console.log('User Confirmed Password');
+        }
+        else {
+          console.log('User did\'t Enter Confirmed Password');
+        }
+
+      }*/
+      
+      </script>
+
+      <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+      <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+
+</body>
+</html>
