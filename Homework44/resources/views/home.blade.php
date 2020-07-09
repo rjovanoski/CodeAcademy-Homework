@@ -25,18 +25,18 @@
 				@endforeach
 							
 			</div>
-		<div class="row no-collapse-1">
+		        <div class="row no-collapse-1">
 								
-			@foreach ($cards as $image)							
-				<section class="4u"> <a href="#" class="image featured"><img src="{{$image->img_filename}}" alt=""></a>
-					<div class="box">
-						<p>{{$image->body}}</p>
-						<a href="#" class="button">Read More</a> 
-					</div>
-				</section>
-			@endforeach
+			        @foreach ($cards as $image)							
+				        <section class="4u"> <a href="#" class="image featured"><img src="{{$image->img_filename}}" alt=""></a>
+					        <div class="box">
+						        <p>{{$image->body}}</p>
+						        <a href="#" class="button">Read More</a> 
+					        </div>
+				        </section>
+			        @endforeach
 
-			</div>
+			    </div>
 		</div>
 	</div>
 
