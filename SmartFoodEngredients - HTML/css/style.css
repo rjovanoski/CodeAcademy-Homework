@@ -1,0 +1,3077 @@
+*{
+    list-style: none;
+    text-decoration: none;
+    font-family: 'Yantramanav', sans-serif, 'Fira Sans Condensed', sans-serif;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff;    
+}
+.header{
+    margin: 0;
+    padding: 0;
+    height: 100px;
+}
+.header .container{
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    position: relative;
+}
+.container .logo{
+    padding: 0;
+    text-align: center;
+    margin: 20px 0px;    
+}
+.container h3{
+    margin: 0;
+    font-size: 27px;
+    text-transform: uppercase;       
+}
+.container .logo a{
+    color: #7c4937;
+    font-family: 'Black And White Picture', sans-serif;
+}
+.nav-list{
+    margin: 0;
+    padding: 0;
+    background: #7c4937;
+}
+.nav-list .toggle{
+    display: block;
+    cursor: pointer;
+    padding: 10px 0 10px 10px;
+    margin: 0;
+    width: 50px;
+}
+.toggle div{
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+    transition: 0.5s;
+}
+.change .barOne{
+    -webkit-transform: rotate(-45deg) translate(-6px, 4px);
+    transform: rotate(-45deg) translate(-6px, 4px);
+    background: #fff;
+}
+.change .barTwo {
+    opacity: 0;
+}
+.change .barThree {
+    -webkit-transform: rotate(45deg) translate(-6px, -4px);
+    transform: rotate(45deg) translate(-6px, -4px);
+    background: #fff;
+}
+.nav-items{
+    position: absolute;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: calc(100vh - 120px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: #7c4937;
+    clip-path: circle(100px at 10% -30%);
+    -webkit-clip-path: circle(100px at 10% -30%);
+    transition: all 1s ease-out;
+    z-index: 1;
+}
+.nav-items.open{
+    clip-path: circle(1400px at 10% -30%);
+    -webkit-clip-path: circle(1400px at 10% -30%);
+}
+.nav-items li a{
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 20px;
+    letter-spacing: 2px;
+    transition: color 0.5s;
+}
+.nav-items li a:hover{
+    color: #e2be32;
+}
+.dropdown .dropdown-content{
+    display: none;
+}
+.dropdown-user .dropdown-content-user{
+    display: none;
+}
+.hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.hero .hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 60%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.main > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.main > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.main > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+}
+.main > section > div p{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    text-align: left;
+    margin: 10px 10px;
+}
+.popular-recipes .popular-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.popular-box .popular-recipe-image{
+    width: 100%;
+    height: 200px;      
+}
+.popular-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0 ;  
+}
+.popular-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.popular-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.popular-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.breakfast .breakfast-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.breakfast-box .breakfast-recipe-image{
+    width: 100%;
+    height: 150px;  
+}
+.breakfast-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 8px 0 0;    
+}
+.breakfast-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.breakfast-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.breakfast-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.bread .bread-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.bread-box .bread-recipe-image{
+    width: 100%;
+    height: 150px;  
+}
+.bread-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.bread-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.bread-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.bread-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.burger .burger-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.burger-box .burger-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.burger-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.burger-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.burger-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.burger-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.meat .meat-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.meat-box .meat-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.meat-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.meat-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.meat-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+}
+.meat-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.soup .soup-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.soup-box .soup-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.soup-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.soup-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.soup-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.soup-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.pasta .pasta-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.pasta-box .pasta-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.pasta-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.pasta-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.pasta-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.pasta-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.pizza .pizza-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.pizza-box .pizza-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.pizza-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.pizza-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.pizza-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.pizza-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.vegan .vegan-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.vegan-box .vegan-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.vegan-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    border-radius: 8px 8px 0 0;  
+}
+.vegan-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.vegan-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.vegan-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.cake .cake-box{
+    margin-top: 30px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+    border-radius: 8px;
+}
+.cake-box .cake-recipe-image{
+    width: 100%;
+    height: 150px;   
+}
+.cake-recipe-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 8px 8px 0 0;    
+}
+.cake-recipe-image img:hover{ 
+    opacity: 0.9;
+}
+.cake-recipe-description a{
+    color: #b98352;
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: 600;
+    text-align: left;
+    transition: color .5s;
+}
+.cake-recipe-description a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+.footer{
+    margin: 0;
+    padding: 0;
+    background: #7c4937;
+}
+.footer .container{
+    margin: 0;
+    padding: 0;
+}
+.footer .footer-logo{
+    margin: 0px 15px;
+    padding: 20px 0;
+    text-align: center;
+}
+.footer-logo h3{
+    color: #fff;
+    font-size: 25px;
+    font-family: 'Black And White Picture', sans-serif;
+}
+.footer-logo p{
+    color: #fff;
+    font-size: 14px;
+}
+.footer .pages{
+    margin: 0;
+    padding: 20px 0;
+    border-top: 2px solid #8a8a8a;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.footer .pages ul{
+    margin: 0;
+    padding: 0;
+    text-align: left;    
+}
+.footer .pages ul li{
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+.footer .pages ul li a{
+    font-size: 14px;
+    color: #fff;
+    transition: color 0.5s;
+}
+.footer .pages ul li a:hover{
+    color: #e2be32;
+}
+.footer .media-links{
+    display: flex;
+    margin: 0;
+    padding: 10px 0;
+    justify-content: center;
+    border-top: 2px solid #b98352;
+}
+.footer .media-links a{
+    margin: 10px 10px;
+    color: #fff;
+    transition: color .5s;
+}
+.footer .media-links a:hover{
+    color: #e2be32;
+}
+.media-links i{
+    font-size: 25px;
+}
+.footer .credentials{
+    border-top: 2px solid #b98352;
+    height: auto;
+    padding: 10px 0px;
+    text-align: center;    
+}
+.credentials small{
+    font-size: 14px;
+    color: #fff;
+}
+/***********************LOGIN***************************/
+.login{ 
+    margin: 0px auto;   
+    width: 90%;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+}
+.left-side{
+    display: none;
+}
+.right-side h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #7c4937;
+    padding: 20px 0;
+}
+.right-side input{
+    border: none;
+    border-bottom: 2px solid #b98352;
+    padding: 7px;
+    margin: 15px 0;
+    width: 80%;
+}
+.right-side input:focus{
+    outline: none;
+}
+.right-side .btn{
+    border: none;
+    padding: 7px 30px;
+    background: #b98352;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color: #fff;
+    transition: background .5s;
+}
+.right-side .btn:hover{
+    cursor: pointer;
+    background: #7c4937;
+}
+.right-side .forgot-noAccount{
+    margin-top: 30px;
+}
+.right-side p{
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.right-side a{
+    font-size: 16px;
+    color: #b98352;
+    transition: color .5s;
+}
+.right-side a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+/***********************LOGIN***************************/
+/***********************REGISTER***************************/
+.register{    
+    width: 90%;
+    text-align: center;
+    margin-top: 100px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;   
+}
+.register-left-side{
+    display: none;
+}
+.register-right-side h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #7c4937;
+    padding: 20px 0;
+}
+.register-right-side input{
+    border: none;
+    border-bottom: 2px solid #b98352;
+    padding: 7px;
+    margin: 15px 0;
+    width: 80%;
+}
+.register-right-side input:focus{
+    outline: none;
+}
+.register-right-side .btn{
+    border: none;
+    padding: 7px 30px;
+    background: #b98352;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color: #fff;
+    transition: background .5s;
+}
+.register-right-side .btn:hover{
+    background: #7c4937;
+    cursor: pointer;
+}
+.register-right-side .forgot-login{
+    margin-top: 30px;
+}
+.register-right-side p{
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.register-right-side a{
+    font-size: 16px;
+    color: #b98352;
+    transition: color .5s;
+}
+.register-right-side a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+/***********************REGISTER***************************/
+/***********************PASSWORD RESSET***************************/
+.pass-resset{    
+    width: 90%;
+    text-align: center;
+    margin-top: 100px; 
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;   
+}
+.pass-resset-left-side{
+    display: none;
+}
+.pass-resset-right-side h1{
+    font-size: 25px;
+    text-transform: uppercase;
+    color: #7c4937;
+    padding: 20px 0;
+}
+.pass-resset-right-side input{
+    border: none;
+    border-bottom: 2px solid #b98352;
+    padding: 7px;
+    margin: 15px 0;
+    width: 80%;
+}
+.pass-resset-right-side input:focus{
+    outline: none;
+}
+.pass-resset-right-side .btn{
+    border: none;
+    padding: 7px 30px;
+    background: #b98352;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    color: #fff;
+    transition: background .5s;
+}
+.pass-resset-right-side .btn:hover{
+    background: #7c4937;
+    cursor: pointer;
+}
+.pass-resset-right-side .btn:hover{
+    background: #7c4937;
+}
+.pass-resset-right-side .register-login{
+    margin-top: 30px;
+}
+.pass-resset-right-side p{
+    color: #8a8a8a;
+    font-size: 14px;
+    padding: 10px 0;
+}
+.pass-resset-right-side a{
+    font-size: 16px;
+    color: #b98352;
+}
+.pass-resset-right-side a:hover{
+    color: #7c4937;
+    cursor: pointer;
+}
+/***********************PASSWORD RESSET***************************/
+/***********************RECIPES PAGE******************************/
+.nav-recipes{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+    height: calc(100vh - 120px);
+    background-image: url("../img/recepes/cook-366875_1920.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.nav-recipes .nav-list-recipes{
+    margin: 0px auto;
+    padding: 0;
+    width: 90%;
+    padding-top: 40px;
+}
+.nav-list-recipes li{
+    display: inline-block;
+    padding: 0;
+    margin: 5px;    
+    border-radius: 8px;
+    background: #7c4937;
+}
+.nav-list-recipes a{
+    color: #fff;
+    text-shadow: 2px 2px #111;
+    text-transform: uppercase;
+    font-size: 25px;
+    letter-spacing: 2px;
+    display: inline-block;
+    margin: 10px 20px;
+    transition: color .5s;
+    cursor: pointer;
+}
+.nav-list-recipes a:hover{
+    color: #e2be32;
+}
+.main-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.main-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.main-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.main-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.main-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.main-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.main-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.container .recipe-image{
+    width: 100%;
+    height: 200px;       
+}
+.container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;      
+}
+.main-recipes .breakfast-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .bread-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .burger-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .meat-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .soup-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .pasta-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .pizza-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .vegan-box-recipe{
+    margin-top: 100px;    
+}
+.main-recipes .cake-box-recipe{
+    margin-top: 100px;    
+}
+/***********************RECIPES PAGE******************************/
+/***********************BREAKFAST PAGE******************************/
+.breakfast-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.breakfast-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.breakfast-hero .breakfast-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.breakfast-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.breakfast-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.breakfast-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.breakfast-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.breakfast-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.breakfast-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.breakfast-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.breakfast-recipes .breakfast-box-recipe{
+    margin-top: 100px;    
+}
+/***********************BREAKFAST PAGE******************************/
+/***********************BREAD PAGE******************************/
+.bread-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.bread-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.bread-hero .bread-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.bread-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.bread-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.bread-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.bread-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.bread-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.bread-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.bread-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.bread-recipes .bread-box-recipe{
+    margin-top: 100px;    
+}
+/***********************BREAD PAGE******************************/
+/***********************BURGER PAGE******************************/
+.burger-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.burger-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.burger-hero .burger-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.burger-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.burger-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.burger-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.burger-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.burger-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.burger-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.burger-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.burger-recipes .burger-box-recipe{
+    margin-top: 100px;    
+}
+/***********************BURGER PAGE******************************/
+/***********************MEAT PAGE******************************/
+.meat-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.meat-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.meat-hero .meat-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.meat-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.meat-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.meat-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.meat-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.meat-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.meat-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.meat-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.meat-recipes .meat-box-recipe{
+    margin-top: 100px;    
+}
+/***********************MEAT PAGE******************************/
+/***********************SOUP PAGE******************************/
+.soup-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.soup-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.soup-hero .soup-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.soup-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.soup-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.soup-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.soup-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.soup-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.soup-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.soup-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.soup-recipes .soup-box-recipe{
+    margin-top: 100px;    
+}
+/***********************SOUP PAGE******************************/
+/***********************PASTA PAGE******************************/
+.pasta-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.pasta-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pasta-hero .pasta-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.pasta-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.pasta-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.pasta-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.pasta-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.pasta-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.pasta-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.pasta-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.pasta-recipes .pasta-box-recipe{
+    margin-top: 100px;    
+}
+/***********************PASTA PAGE******************************/
+/***********************PIZZA PAGE******************************/
+.pizza-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.pizza-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.pizza-hero .pizza-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.pizza-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.pizza-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.pizza-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.pizza-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.pizza-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.pizza-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.pizza-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.pizza-recipes .pizza-box-recipe{
+    margin-top: 100px;
+}
+/***********************PIZZA PAGE******************************/
+/***********************VEGAN PAGE******************************/
+.vegan-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.vegan-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.vegan-hero .vegan-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.vegan-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.vegan-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.vegan-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.vegan-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.vegan-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.vegan-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.vegan-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.vegan-recipes .vegan-box-recipe{
+    margin-top: 100px;    
+}
+/***********************VEGAN PAGE******************************/
+/***********************CAKE PAGE******************************/
+.cake-hero{
+    height: calc(100vh - 120px);
+    width: 100%;
+    margin: 0;
+}
+.cake-hero img{
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.cake-hero .cake-hero-text{
+    margin-left: 10px;
+    position: absolute;
+    height: 400px;
+    width: 90%;
+    top: 20%;
+    color: #fff;
+    font-size: 30px;
+    text-transform: uppercase;
+    font-weight: 600;
+    text-shadow: 2px 2px #111;
+}
+.cake-recipes > section{
+    margin: 0px auto;
+    padding: 0;
+    text-align: center;
+    justify-content: center;
+    width: 90%;
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+.cake-recipes > section > h1{
+    color: #7c4937;
+    font-size: 22px;
+    text-transform: uppercase;
+    border-top: 2px solid #8a8a8a;
+    border-bottom: 2px solid #8a8a8a;
+}
+.cake-recipes > section > div h2{
+    color: #7c4937;
+    font-size: 18px;
+    text-transform: uppercase;
+    margin: 10px 0px;
+    padding: 0;
+    text-align: left;
+}
+.cake-recipes > section > div h3{
+    color: #7c4937;
+    font-size: 14px;
+    text-transform: uppercase;
+    padding: 0;
+    text-align: left;
+}
+.cake-recipes > section > div span{
+    color: #8a8a8a;
+    font-size: 12px;
+    text-transform: capitalize;
+    padding: 0;
+}
+.cake-recipes > section > div .ingredients{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;    
+}
+.cake-recipes > section > div .preparation{
+    color: #7c4937;
+    font-size: 13px;
+    text-transform: uppercase;
+    text-align: left;
+}
+.cake-recipes .cake-box-recipe{
+    margin-top: 100px;
+}
+/***********************CAKE PAGE******************************/
+@media only screen and (min-width: 450px){
+    .container h3{
+        letter-spacing: 2px;
+        font-size: 27px;       
+    }
+    .popular-recipes .popular-box{
+        margin-top: 50px;
+    }
+    .popular-box .popular-recipe-image{
+        width: 100%;
+        height: 300px;   
+    }    
+    .popular-recipe-description a{
+        font-size: 15px;
+    }
+    .breakfast .breakfast-box{
+        margin-top: 50px;
+    }
+    .breakfast-box .breakfast-recipe-image{        
+        height: 250px;
+    }    
+    .breakfast-recipe-description a{
+        font-size: 15px;
+    }
+    .bread .bread-box{
+        margin-top: 50px;
+    }
+    .bread-box .bread-recipe-image{        
+        height: 250px;   
+    }    
+    .bread-recipe-description a{
+        font-size: 15px;
+    }
+    .burger .burger-box{
+        margin-top: 50px;
+    }
+    .burger-box .burger-recipe-image{        
+        height: 250px;   
+    }    
+    .burger-recipe-description a{
+        font-size: 15px;
+    }
+    .meat .meat-box{
+        margin-top: 50px;
+    }
+    .meat-box .meat-recipe-image{        
+        height: 250px;   
+    }    
+    .meat-recipe-description a{
+        font-size: 15px;
+    }
+    .soup .soup-box{
+        margin-top: 50px;
+    }
+    .soup-box .soup-recipe-image{        
+        height: 250px;   
+    }    
+    .soup-recipe-description a{
+        font-size: 15px;
+    }
+    .pasta .pasta-box{
+        margin-top: 50px;
+    }
+    .pasta-box .pasta-recipe-image{        
+        height: 250px;   
+    }    
+    .pasta-recipe-description a{
+        font-size: 15px;
+    }
+    .pizza .pizza-box{
+        margin-top: 50px;
+    }
+    .pizza-box .pizza-recipe-image{        
+        height: 250px;   
+    }    
+    .pizza-recipe-description a{
+        font-size: 15px;
+    }
+    .vegan .vegan-box{
+        margin-top: 50px;
+    }
+    .vegan-box .vegan-recipe-image{        
+        height: 250px;   
+    }    
+    .vegan-recipe-description a{
+        font-size: 15px;
+    }
+    .cake .cake-box{
+        margin-top: 50px;
+    }
+    .cake-box .cake-recipe-image{        
+        height: 250px;   
+    }    
+    .cake-recipe-description a{
+        font-size: 15px;
+    }
+    /***********************LOGIN***************************/
+    .login{
+        margin: 0px auto;
+        width: 80%;
+        margin-top: 100px;
+    }
+    /***********************LOGIN***************************/
+    /***********************REGISTER***************************/
+    .register{
+        margin: 0px auto;
+        width: 80%;
+        margin-top: 100px;
+    }
+    /***********************REGISTER***************************/
+    /***********************PASSWORD RESSET***************************/
+    .pass-resset{
+        margin: 0px auto;
+        width: 80%;
+        margin-top: 100px;
+    }
+    /***********************PASSWORD RESSET***************************/
+    /***********************RECIPES PAGE******************************/
+    .container .recipe-image{        
+        height: 250px;   
+    }        
+    /***********************RECIPES PAGE******************************/
+}
+@media only screen and (min-width: 550px){
+    .hero .hero-text{
+        margin-left: 30px;
+        font-size: 35px;
+    }    
+    .popular-box .popular-recipe-image{
+        height: 350px;   
+    }
+    .breakfast-box .breakfast-recipe-image{
+        height: 300px;   
+    }
+    .bread-box .bread-recipe-image{
+        height: 300px;   
+    }
+    .burger-box .burger-recipe-image{
+        height: 300px;   
+    }
+    .meat-box .meat-recipe-image{
+        height: 300px;   
+    }
+    .soup-box .soup-recipe-image{
+        height: 300px;   
+    }
+    .pasta-box .pasta-recipe-image{
+        height: 300px;   
+    }
+    .pizza-box .pizza-recipe-image{
+        height: 300px;   
+    }
+    .vegan-box .vegan-recipe-image{
+        height: 300px;   
+    }
+    .cake-box .cake-recipe-image{
+        height: 300px;   
+    }
+    /***********************LOGIN***************************/
+    .login{    
+        width: 60%;    
+    }    
+    /***********************LOGIN***************************/
+    /***********************REGISTER***************************/
+    .register{    
+        width: 60%;    
+    }    
+    /***********************REGISTER***************************/
+    /***********************PASSWORD RESSET***************************/
+    .pass-resset{    
+        width: 60%;    
+    }    
+    /***********************PASSWORD RESSET***************************/
+    /***********************RECIPES PAGE******************************/
+    .main-recipes > section > h1{
+        font-size: 24px;
+    }
+    .main-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .main-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .main-recipes > section > div span{
+        font-size: 13px;
+    }
+    .main-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .main-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    .container .recipe-image{        
+        height: 300px;    
+    }        
+    /***********************RECIPES PAGE******************************/
+    /***********************BREAKFAST PAGE****************************/
+    .breakfast-recipes > section > h1{
+        font-size: 24px;
+    }
+    .breakfast-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .breakfast-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .breakfast-recipes > section > div span{
+        font-size: 13px;
+    }
+    .breakfast-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .breakfast-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************BREAKFAST PAGE****************************/
+    /***********************BREAD PAGE****************************/
+    .bread-recipes > section > h1{
+        font-size: 24px;
+    }
+    .bread-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .bread-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .bread-recipes > section > div span{
+        font-size: 13px;
+    }
+    .bread-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .bread-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************BREAD PAGE****************************/
+    /***********************BURGER PAGE****************************/
+    .burger-recipes > section > h1{
+        font-size: 24px;
+    }
+    .burger-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .burger-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .burger-recipes > section > div span{
+        font-size: 13px;
+    }
+    .burger-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .burger-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************BURGER PAGE****************************/
+    /***********************MEAT PAGE****************************/
+    .meat-recipes > section > h1{
+        font-size: 24px;
+    }
+    .meat-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .meat-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .meat-recipes > section > div span{
+        font-size: 13px;
+    }
+    .meat-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .meat-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************MEAT PAGE****************************/
+    /***********************SOUP PAGE****************************/
+    .soup-recipes > section > h1{
+        font-size: 24px;
+    }
+    .soup-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .soup-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .soup-recipes > section > div span{
+        font-size: 13px;
+    }
+    .soup-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .soup-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************SOUP PAGE****************************/
+    /***********************PASTA PAGE****************************/
+    .pasta-recipes > section > h1{
+        font-size: 24px;
+    }
+    .pasta-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .pasta-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .pasta-recipes > section > div span{
+        font-size: 13px;
+    }
+    .pasta-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .pasta-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************PASTA PAGE****************************/
+    /***********************PIZZA PAGE****************************/
+    .pizza-recipes > section > h1{
+        font-size: 24px;
+    }
+    .pizza-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .pizza-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .pizza-recipes > section > div span{
+        font-size: 13px;
+    }
+    .pizza-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .pizza-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************PIZZA PAGE****************************/
+    /***********************VEGAN PAGE****************************/
+    .vegan-recipes > section > h1{
+        font-size: 24px;
+    }
+    .vegan-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .vegan-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .vegan-recipes > section > div span{
+        font-size: 13px;
+    }
+    .vegan-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .vegan-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************VEGAN PAGE****************************/
+    /***********************CAKE PAGE****************************/
+    .cake-recipes > section > h1{
+        font-size: 24px;
+    }
+    .cake-recipes > section > div h2{
+        font-size: 20px;
+    }
+    .cake-recipes > section > div h3{
+        font-size: 16px;
+    }
+    .cake-recipes > section > div span{
+        font-size: 13px;
+    }
+    .cake-recipes > section > div .ingredients{
+        font-size: 14px;   
+    }
+    .cake-recipes > section > div .preparation{
+        font-size: 14px;
+    }
+    /***********************CAKE PAGE****************************/
+}
+@media only screen and (min-width: 650px){
+    .hero .hero-text{
+        margin-left: 40px;
+        font-size: 40px;
+    }    
+    .main section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+    .popular-box .popular-recipe-image{
+        height: 250px;   
+    }
+    .breakfast-box .breakfast-recipe-image{
+        height: 200px;   
+    }
+    .bread-box .bread-recipe-image{
+        height: 200px;   
+    }
+    .burger-box .burger-recipe-image{
+        height: 200px;   
+    }
+    .meat-box .meat-recipe-image{
+        height: 200px;   
+    }
+    .soup-box .soup-recipe-image{
+        height: 200px;   
+    }
+    .pasta-box .pasta-recipe-image{
+        height: 200px;   
+    }
+    .pizza-box .pizza-recipe-image{
+        height: 200px;   
+    }
+    .vegan-box .vegan-recipe-image{
+        height: 200px;   
+    }
+    .cake-box .cake-recipe-image{
+        height: 200px;   
+    }
+    .footer .container{
+        margin: 0px auto;
+        display: flex;
+        text-align: center;
+        width: 90%;
+        justify-content: space-between;
+    }
+    .container .footer-logo{
+        width: 40%;
+        text-align: left;
+    }
+    .container .pages{
+        width: 60%;
+        margin: 20px 0;
+        border: none;
+        padding: 0px;
+    }
+    /***********************RECIPES PAGE******************************/
+    .main-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    }
+    .container .recipe-image{        
+        height: 200px;    
+    }        
+    /***********************RECIPES PAGE******************************/
+    /***********************BREAKFAST PAGE****************************/
+    .breakfast-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************BREAKFAST PAGE****************************/
+    /***********************BREAD PAGE****************************/
+    .bread-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************BREAD PAGE****************************/
+    /***********************BURGER PAGE****************************/
+    .burger-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************BURGER PAGE****************************/
+    /***********************MEAT PAGE****************************/
+    .meat-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************MEAT PAGE****************************/
+    /***********************SOUP PAGE****************************/
+    .soup-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************SOUP PAGE****************************/
+    /***********************PASTA PAGE****************************/
+    .pasta-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************PASTA PAGE****************************/
+    /***********************PIZZA PAGE****************************/
+    .pizza-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************PIZZA PAGE****************************/
+    /***********************VEGAN PAGE****************************/
+     .vegan-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************VEGAN PAGE****************************/
+    /***********************CAKE PAGE****************************/
+    .cake-recipes section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-column-gap: 20px;
+    } 
+    /***********************CAKE PAGE****************************/
+}
+@media only screen and (min-width: 850px){
+    @supports(position:sticky){
+        .header{     
+        width: 100%;
+        position: -webkit-sticky;
+        position: sticky;
+        top: 0;
+        background: #fff;
+        border-bottom: 2px solid #7c4937;
+        z-index: 1;
+        height: 100px;
+        }
+    }    
+    .header .container{
+        margin: 0px auto;
+        display: flex;
+        justify-content: space-between;
+        width: 90%;
+        height: 100%;
+        align-items: center;               
+    }
+    .container .logo h3{
+        font-size: 30px;
+    }
+    .hero{
+        height: calc(100vh - 100px);
+    }
+    .hero .hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        width: 70%;
+    }
+    .nav-list{
+        background: none;
+    }
+    .nav-list .toggle{
+        display: none;
+    }
+    .container .nav-items{
+        position: relative;
+        height: auto;
+        flex-direction: row;
+        background: none;
+        clip-path: none;        
+    }
+    .nav-items li{
+        margin: 0 10px;
+    }
+    .nav-items li a{
+        color: #7c4937;
+        text-transform: uppercase;
+        font-size: 15px;
+    }  
+    .nav-items li a:hover{
+        color: #b98352;
+    } 
+    .nav-items .dropdown{
+        position: relative;
+        display: block;
+    } 
+    .dropdown .dropdown-content{
+        display: none;
+        position: absolute;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        height: 300px;
+        width: 100px;
+        z-index: 1;
+        background: #fff;
+        border: 2px solid #7c4937;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+        border-radius: 4px;
+    }
+    .dropdown-content a{
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+    }
+    .dropdown-content a:hover{
+        display: block;
+    }
+    .dropdown:hover .dropdown-content{
+        display: flex;        
+    }
+    .dropdown-user .dropdown-content-user{
+        display: none;
+        position: absolute;
+        right: -25px;
+        flex-direction: column;
+        justify-content: space-evenly;
+        align-items: center;
+        text-align: center;
+        height: 150px;
+        width: 80px;
+        z-index: 1;
+        background: #fff;
+        border: 2px solid #7c4937;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 #7c4937;
+        border-radius: 4px;
+    }
+    .dropdown-content-user a{
+        font-size: 12px !important;
+        letter-spacing: 1px !important;
+    }
+    .dropdown-content-user a:hover{
+        display: block;
+    }
+    .dropdown-user:hover .dropdown-content-user{
+        display: flex;        
+    }
+    .popular-box .popular-recipe-image{
+        height: 300px;   
+    }
+    .main > section{
+        margin: 0px auto;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        width: 90%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    } 
+    .footer-logo h3{
+        font-size: 30px;
+    }   
+    /***********************LOGIN***************************/
+    .login{
+        width: 80%;
+        height: 600px;
+        margin-top: 100px;   
+    }
+    .left-side{
+        display: block;
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    .left-side img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .right-side{
+        width: 50%;
+        float: right;
+        margin-top: 50px;
+    }
+    /***********************LOGIN***************************/
+    /***********************REGISTER***************************/
+    .register{
+        width: 80%;
+        height: 700px;
+        margin-top: 100px;
+    }
+    .register-left-side{
+        display: block;
+        width: 50%;
+        height: 100%;
+        float: left;
+        
+    }
+    .register-left-side img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .register-right-side{
+        width: 50%;
+        float: right;
+    }
+    /***********************REGISTER***************************/
+    /***********************PASSWORD RESSET***************************/
+    .pass-resset{
+        width: 80%;
+        height: 600px;
+        margin-top: 100px;
+    }
+    .pass-resset-left-side{
+        display: block;
+        width: 50%;
+        height: 100%;
+        float: left;
+    }
+    .pass-resset-left-side img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .pass-resset-right-side{
+        width: 50%;
+        float: right;
+        margin-top: 100px;
+    }
+    /***********************PASSWORD RESSET***************************/
+    /***********************RECIPES PAGE***************************/
+    .nav-recipes{
+        height: calc(100vh - 100px);
+    }
+    .nav-recipes .nav-list-recipes{
+        width: 100%;
+        padding-top: 100px;
+    }
+    .nav-list-recipes a{
+        font-size: 27px;
+    }
+    .main-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .container .breakfast-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .bread-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .burger-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .meat-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .soup-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .pasta-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .pizza-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .vegan-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .cake-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .main-recipes > section > div h2{
+        margin-top: 0;
+    }
+    .container .recipe-image{        
+        height: 300px; 
+        width: 50%;   
+    }    
+    /***********************RECIPES PAGE***************************/
+    /***********************BREAKFAST PAGE****************************/
+    .breakfast-hero{
+        height: calc(100vh - 100px);
+    }
+    .breakfast-hero .breakfast-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .breakfast-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .breakfast .breakfast-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .breakfast-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************BREAKFAST PAGE****************************/
+    /***********************BREAD PAGE****************************/
+    .bread-hero{
+        height: calc(100vh - 100px);
+    }
+    .bread-hero .bread-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .bread-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .bread .bread-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .bread-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************BREAD PAGE****************************/
+    /***********************BURGER PAGE****************************/
+    .burger-hero{
+        height: calc(100vh - 100px);
+    }
+    .burger-hero .burger-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .burger-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .burger .burger-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .burger-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************BURGER PAGE****************************/
+    /***********************MEAT PAGE****************************/
+    .meat-hero{
+        height: calc(100vh - 100px);
+    }
+    .meat-hero .meat-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .meat-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .meat .meat-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .meat-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************MEAT PAGE****************************/
+    /***********************SOUP PAGE****************************/
+    .soup-hero{
+        height: calc(100vh - 100px);
+    }
+    .soup-hero .soup-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .soup-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .soup .soup-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .soup-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************SOUP PAGE****************************/
+    /***********************PASTA PAGE****************************/
+    .pasta-hero{
+        height: calc(100vh - 100px);
+    }
+    .pasta-hero .pasta-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .pasta-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .pasta .pasta-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .pasta-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************PASTA PAGE****************************/
+    /***********************PIZZA PAGE****************************/
+    .pizza-hero{
+        height: calc(100vh - 100px);
+    }
+    .pizza-hero .pizza-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .pizza-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .pizza .pizza-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .pizza-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************PIZZA PAGE****************************/
+    /***********************VEGAN PAGE****************************/
+    .vegan-hero{
+        height: calc(100vh - 100px);
+    }
+    .vegan-hero .vegan-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .vegan-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .vegan .vegan-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .vegan-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************VEGAN PAGE****************************/
+    /***********************CAKE PAGE****************************/
+    .cake-hero{
+        height: calc(100vh - 100px);
+    }
+    .cake-hero .cake-hero-text{
+        margin-left: 50px;
+        font-size: 45px;
+        top: 50%;        
+    }
+    .cake-recipes section .container{
+        grid-template-columns: 1fr;
+    }
+    .cake .cake-box-recipe{
+        display: flex;
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+    .container .recipe-left-side{
+        width: 40%;
+    }
+    .cake-recipes > section > div h2{
+        margin-top: 0;
+    }
+    /***********************CAKE PAGE****************************/
+}    
+@media only screen and (min-width: 1000px){
+    .header .container{        
+        width: 80%;
+    }
+    .nav-items li{
+        margin: 0 12px;
+    }
+    .nav-items li a{
+        font-size: 16px;
+        letter-spacing: 1px;
+    } 
+    .dropdown .dropdown-content{
+        height: 320px;
+        width: 120px;
+    }
+    .dropdown-content a{
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    } 
+    .dropdown-user .dropdown-content-user{
+        height: 150px;
+        width: 100px;
+        right: auto;
+    }
+    .dropdown-content-user a{
+        font-size: 14px !important;
+        letter-spacing: 2px !important;
+    } 
+    .hero .hero-text{
+        font-size: 50px;
+        width: 50%;
+    } 
+    .main section .container{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 50px;
+    }
+    .popular-box .popular-recipe-image{
+        height: 250px;           
+    }
+    .breakfast-box .breakfast-recipe-image{
+        height: 200px;   
+    }
+    .bread-box .bread-recipe-image{
+        height: 200px;   
+    }
+    .burger-box .burger-recipe-image{
+        height: 200px;   
+    }
+    .meat-box .meat-recipe-image{
+        height: 200px;   
+    }
+    .soup-box .soup-recipe-image{
+        height: 200px;   
+    }
+    .pasta-box .pasta-recipe-image{
+        height: 200px;   
+    }
+    .pizza-box .pizza-recipe-image{
+        height: 200px;   
+    }
+    .vegan-box .vegan-recipe-image{
+        height: 200px;   
+    }
+    .cake-box .cake-recipe-image{
+        height: 200px;   
+    }
+    .footer-logo h3{
+        font-size: 36px;
+    }
+    .footer-logo p{
+        font-size: 15px;
+    }    
+    .footer .pages ul li a{
+        font-size: 18px;
+    }
+    .footer .media-links a{
+        margin: 10px 20px;
+    }
+    .media-links i{
+        font-size: 32px;
+    }
+    /***********************LOGIN***************************/
+    .login{
+        margin-top: 50px;
+        width: 70%;
+        height: 700px;        
+    }
+    .right-side{
+        margin-top: 50px;
+    }
+    .right-side h1{
+        font-size: 30px;
+    }
+    .right-side .btn{
+        padding: 10px 40px;
+    }
+    /***********************LOGIN***************************/
+    /***********************REGISTER***************************/
+    .register{
+        margin-top: 50px;
+        width: 70%;
+        height: 700px;        
+    }
+    .register-right-side h1{
+        font-size: 30px;
+    }
+    .register-right-side .btn{
+        padding: 10px 40px;
+    }
+    /***********************REGISTER***************************/
+    /***********************PASSWORD RESSET***************************/
+    .pass-resset{
+        margin-top: 50px;
+        width: 70%;
+        height: 700px;        
+    }
+    .pass-resset-right-side h1{
+        font-size: 30px;
+    }
+    .pass-resset-right-side .btn{
+        padding: 10px 40px;
+    }
+    /***********************PASSWORD RESSET***************************/
+    /***********************RECIPES PAGE***************************/
+    .nav-recipes .nav-list-recipes{
+        padding-top: 150px;
+    }
+    .main-recipes > section{
+        width: 80%;
+    }
+    .main-recipes > section > h1{
+        font-size: 30px;
+    }
+    .main-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .main-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .main-recipes > section > div span{
+        font-size: 15px;
+    }
+    .main-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .main-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    .container .recipe-image{        
+        height: 400px;   
+    }     
+    /***********************RECIPES PAGE***************************/
+    /***********************BREAKFAST PAGE****************************/
+    .breakfast-recipes > section{
+        width: 80%;
+    }
+    .breakfast-recipes > section > h1{
+        font-size: 30px;
+    }
+    .breakfast-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .breakfast-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .breakfast-recipes > section > div span{
+        font-size: 15px;
+    }
+    .breakfast-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .breakfast-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************BREAKFAST PAGE****************************/
+    /***********************BREAD PAGE****************************/
+    .bread-recipes > section{
+        width: 80%;
+    }
+    .bread-recipes > section > h1{
+        font-size: 30px;
+    }
+    .bread-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .bread-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .bread-recipes > section > div span{
+        font-size: 15px;
+    }
+    .bread-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .bread-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************BREAD PAGE****************************/
+    /***********************BURGER PAGE****************************/
+    .burger-recipes > section{
+        width: 80%;
+    }
+    .burger-recipes > section > h1{
+        font-size: 30px;
+    }
+    .burger-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .burger-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .burger-recipes > section > div span{
+        font-size: 15px;
+    }
+    .burger-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .burger-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************BURGER PAGE****************************/
+    /***********************MEAT PAGE****************************/
+    .meat-recipes > section{
+        width: 80%;
+    }
+    .meat-recipes > section > h1{
+        font-size: 30px;
+    }
+    .meat-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .meat-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .meat-recipes > section > div span{
+        font-size: 15px;
+    }
+    .meat-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .meat-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************MEAT PAGE****************************/
+    /***********************SOUP PAGE****************************/
+    .soup-recipes > section{
+        width: 80%;
+    }
+    .soup-recipes > section > h1{
+        font-size: 30px;
+    }
+    .soup-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .soup-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .soup-recipes > section > div span{
+        font-size: 15px;
+    }
+    .soup-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .soup-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************SOUP PAGE****************************/
+    /***********************PASTA PAGE****************************/
+    .pasta-recipes > section{
+        width: 80%;
+    }
+    .pasta-recipes > section > h1{
+        font-size: 30px;
+    }
+    .pasta-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .pasta-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .pasta-recipes > section > div span{
+        font-size: 15px;
+    }
+    .pasta-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .pasta-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************PASTA PAGE****************************/
+    /***********************PIZZA PAGE****************************/
+    .pizza-recipes > section{
+        width: 80%;
+    }
+    .pizza-recipes > section > h1{
+        font-size: 30px;
+    }
+    .pizza-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .pizza-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .pizza-recipes > section > div span{
+        font-size: 15px;
+    }
+    .pizza-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .pizza-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************PIZZA PAGE****************************/
+    /***********************VEGAN PAGE****************************/
+    .vegan-recipes > section{
+        width: 80%;
+    }
+    .vegan-recipes > section > h1{
+        font-size: 30px;
+    }
+    .vegan-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .vegan-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .vegan-recipes > section > div span{
+        font-size: 15px;
+    }
+    .vegan-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .vegan-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************VEGAN PAGE****************************/
+    /***********************CAKE PAGE****************************/
+    .cake-recipes > section{
+        width: 80%;
+    }
+    .cake-recipes > section > h1{
+        font-size: 30px;
+    }
+    .cake-recipes > section > div h2{
+        font-size: 25px;
+        margin-bottom: 20px;
+    }
+    .cake-recipes > section > div h3{
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    .cake-recipes > section > div span{
+        font-size: 15px;
+    }
+    .cake-recipes > section > div .ingredients{
+        font-size: 18px;   
+    }
+    .cake-recipes > section > div .preparation{
+        font-size: 18px;
+    }
+    /***********************CAKE PAGE****************************/
+}
+@media only screen and (min-width: 1350px){
+    .container .logo h3{
+        font-size: 40px;        
+    }
+    .nav-items li{
+        margin: 0 20px;
+    }
+    .nav-items li a{
+        font-size: 20px;
+        letter-spacing: 2px;
+    } 
+    .dropdown .dropdown-content{
+        height: 350px;
+        width: 130px;
+    }
+    .dropdown-content a{
+        font-size: 16px !important;
+    } 
+    .dropdown-user .dropdown-content-user{
+        height: 180px;
+        width: 120px;
+        right: auto;
+    }
+    .dropdown-content-user a{
+        font-size: 16px !important;
+    } 
+    .hero .hero-text{
+        margin-left: 100px;        
+    }   
+    .main section .container{
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .breakfast-box .breakfast-recipe-image{
+        height: 200px;           
+    }
+    .bread-box .bread-recipe-image{
+        height: 200px;           
+    }
+    .burger-box .burger-recipe-image{
+        height: 200px;           
+    }
+    .meat-box .meat-recipe-image{
+        height: 200px;           
+    }
+    .soup-box .soup-recipe-image{
+        height: 200px;           
+    }
+    .pasta-box .pasta-recipe-image{
+        height: 200px;           
+    }
+    .pizza-box .pizza-recipe-image{
+        height: 200px;           
+    }
+    .vegan-box .vegan-recipe-image{
+        height: 200px;           
+    }
+    .cake-box .cake-recipe-image{
+        height: 200px;           
+    }
+    .main > section{
+        margin: 0px auto;
+        padding: 0;
+        text-align: center;
+        justify-content: center;
+        width: 80%;
+        margin-top: 100px;
+        margin-bottom: 100px;
+    }
+    .footer .container{
+        width: 80%;        
+    }
+    .container .footer-logo{
+        margin-top: 10px;
+    }
+    .footer-logo h3{
+        color: #fff;
+        font-size: 50px;
+        font-family: 'Black And White Picture', sans-serif;
+    }
+    /***********************LOGIN***************************/
+    .login{
+        width: 60%;       
+    }
+    .right-side input{
+        width: 60%;
+    }
+    /***********************LOGIN***************************/
+    /***********************REGISTER***************************/
+    .register{
+        width: 60%;       
+    }
+    .register input{
+        width: 60%;
+    }
+    /***********************LOGIN***************************/
+    /***********************PASSWORD RESSET***************************/
+    .pass-resset{
+        width: 60%;       
+    }
+    .pass-resset input{
+        width: 60%;
+    }
+    /***********************PASSWORD RESSET***************************/
+    /***********************RECIPES PAGE***************************/
+    .nav-recipes .nav-list-recipes{
+        width: 100%;
+        padding-top: 200px;
+    }
+    .nav-list-recipes a{
+        font-size: 30px;
+    }
+    .main-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    .container .recipe-left-side{
+        width: 45%;
+    }
+    .container .recipe-image{        
+        height: 250px; 
+        width: 50%; 
+    }     
+    /***********************RECIPES PAGE***************************/
+    /***********************BREAKFAST PAGE****************************/
+    .breakfast-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************BREAKFAST PAGE****************************/
+    /***********************BREAD PAGE****************************/
+    .bread-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************BREAD PAGE****************************/
+    /***********************BURGER PAGE****************************/
+    .burger-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************BURGER PAGE****************************/
+    /***********************MEAT PAGE****************************/
+    .meat-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************MEAT PAGE****************************/
+    /***********************SOUP PAGE****************************/
+    .soup-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************SOUP PAGE****************************/
+    /***********************PASTA PAGE****************************/
+    .pasta-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************PASTA PAGE****************************/
+    /***********************PIZZA PAGE****************************/
+    .pizza-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************PIZZA PAGE****************************/
+    /***********************VEGAN PAGE****************************/
+    .vegan-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************VEGAN PAGE****************************/
+    /***********************CAKE PAGE****************************/
+    .cake-recipes section .container{
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 50px;
+    }
+    /***********************CAKE PAGE****************************/
+} 
+

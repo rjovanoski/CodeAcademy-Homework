@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food Engredients</title>
+    <link rel="stylesheet" href="../css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&family=Yantramanav&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.0/css/all.css" integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet"> 
+</head>
+<body>
+    
+    <div class="header">
+        <div class="container">            
+                <div class="logo">
+                    <h3><a href="index.html">Smart Food Ingredients</a></h3>
+                </div>                               
+                <ul class="nav-list" id="nav-list">  
+                    <div class="toggle" onclick="myFunction(this)">
+                        <div class="barOne"></div>
+                        <div class="barTwo"></div>
+                        <div class="barThree"></div>
+                    </div>                                         
+                        <div class="nav-items">
+                            <li class="nav-item">
+                                <a href="../index.html" class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown">
+                                    <a href="index.html" class="nav-link">Recipes</a>
+                                        <div class="dropdown-content">
+                                            <a href="index.html" class="nav-link">Breakfast</a>
+                                            <a href="index.html" class="nav-link">Bread</a>
+                                            <a href="index.html" class="nav-link">Burger</a>
+                                            <a href="index.html" class="nav-link">Meat</a>
+                                            <a href="index.html" class="nav-link">Soup</a>
+                                            <a href="index.html" class="nav-link">Pasta</a>
+                                            <a href="index.html" class="nav-link">Pizza</a>
+                                            <a href="index.html" class="nav-link">Vegan</a>
+                                            <a href="index.html" class="nav-link">Cake</a>
+                                        </div>
+                                </div>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">About</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="index.html" class="nav-link">Contact</a>
+                            </li>
+                            <li class="nav-item">
+                                <div class="dropdown-user">
+                                    <a href="pages/login.html" class="nav-link"><i class="fas fa-user"></i></a>
+                                        <div class="dropdown-content-user">
+                                            <a href="pages/login.html" class="nav-link">Login</a>
+                                            <a href="pages/register.html" class="nav-link">Register</a>
+                                            <a href="pages/password.resset.html" class="nav-link">Forgot Password</a>
+                                        </div>
+                                </div>
+                            </li>                                
+                        </div>                          
+                </ul>
+        </div>
+    </div>
+
+        <div class="login">
+            <div class="left-side">
+                <img src="../img/karly-gomez-lK1Q5RyD6tc-unsplash2.jpg" alt="" srcset="">
+            </div>
+                <div class="right-side">               
+                    <div class="form-box">
+                        <h1 class="title">Login</h1>
+                            <form action="" method="POST" name="login">
+                                <div>                        
+                                    <input type="email" name="email" placeholder="Enter Email ..." required>
+                                </div>
+                                    <div>
+                                        <input type="password" name="password"placeholder="Enter Password ..." required>
+                                    </div>
+                                        <button class="btn" type="submit" name="login-submit">Login</button>
+                            </form>
+                            <div class="forgot-noAccount">
+                                <p>Forgot Your Password? <a href="password.resset.html">Enter Here</a></p> 
+                                <p>No Account? <a href="register.html">Register Here</a></p> 
+                            </div>    
+                    </div>
+                </div>
+        </div>
+
+<!-- LOGIN PAGE -->
+
+
+
+        
+        
+            <script src="../js/scripts.js"></script>
+        </body>
+        </html>

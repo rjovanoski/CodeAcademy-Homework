@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Food Engredients</title>
+    <link rel="stylesheet" href="../../css/new.css">
+    <link href="https://fonts.googleapis.com/css2?family=Black+And+White+Picture&display=swap" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css2?family=Fira+Sans+Condensed:wght@400;500;700&family=Yantramanav&display=swap" rel="stylesheet">  
+</head>
+<body>
+
+    <ul class="nav-list" id="nav-list">  
+        <div class="toggle" onclick="myFunction(this)">
+            <div class="barOne"></div>
+            <div class="barTwo"></div>
+            <div class="barThree"></div>
+        </div>                                
+            <div class="nav-items">
+                <li class="nav-item">
+                    <a href="../../index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../user.page.html" class="nav-link">Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#" class="nav-link">Edit Profile</a>
+                </li>
+                <li class="nav-item">
+                    <a href="../userPages/user.recipes.html" class="nav-link">My Recipes</a>
+                </li>
+                <li class="nav-item">
+                    <a href="user.new.recipe.html" class="nav-link">New Recipie</a>
+                </li>
+                <li class="nav-item">
+                    <a href="pages/login.html" class="nav-link">Logout</a>
+                </li>                               
+            </div>                          
+    </ul>
+    <div class="user-profile"> 
+        <form action="" name="user-profile" method="POST">  
+            <div class="image">       
+                <img src="../../img/user/kimson-doan-HD8KlyWRYYM-unsplash.jpg" alt="" srcset="">
+                <input type="file" id="file" name="image"> 
+                <label for="file">Upload Image</label>
+            </div>
+                <div class="user-information">
+                    <h3>My Profile</h3>
+                        <div class="name">
+                            <label for="name">Name:</label> 
+                                <div>
+                                    <input type="text" placeholder="" name="name">                  
+                                </div>
+                        </div>
+                            <div class="lname">
+                                <label for="lname">Last Name:</label>
+                                    <div>
+                                        <input type="text" placeholder="" name="lname">                  
+                                    </div>
+                            </div>
+                                <div class="address">
+                                    <label for="address">Home Address:</label> 
+                                        <div>
+                                            <input type="text" placeholder="" name="address">                  
+                                        </div>
+                                </div>
+                                    <div class="username">
+                                        <label for="username">Username:</label>
+                                            <div>
+                                                <span>radoslav_j</span>
+                                            </div>
+                                    </div>
+                                        <div class="email">
+                                            <label for="email">Email:</label>
+                                                <div>
+                                                    <input type="email" placeholder="" name="email"> 
+                                                </div>
+                                        </div>
+                                            <div class="facebook">
+                                                <label for="fbaccount">Facebook Account:</label>
+                                                    <div>
+                                                        <input type="text" placeholder="" name="fb"> 
+                                                    </div>
+                                            </div>
+                                                <div class="github">
+                                                    <label for="gitaccount">Github Account:</label>        
+                                                        <div>
+                                                            <input type="text" placeholder="" name="git"> 
+                                                        </div>
+                                                </div>
+                                                    <div class="twitter">                                
+                                                        <label for="twitteraccount">Twitter Account:</label>                                                        
+                                                            <div>
+                                                                <input type="text" placeholder="" name="twitter"> 
+                                                            </div>
+                                                    </div>
+                                                        <div class="biography">                                            
+                                                            <label for="biography">Your Biography</label>                                                            
+                                                                <div>
+                                                                    <textarea name="biography" id="" cols="50" rows="5" placeholder="Write something about yourself..."></textarea>
+                                                                </div>
+                                                        </div>
+                                <button type="submit" name="profile-submit">Update</button>
+                </div>
+        </form>
+    </div>
+
+
+
+    <script src="../../js/scripts.js"></script>
+
+</body>
+</html>
