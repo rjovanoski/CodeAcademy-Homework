@@ -1,0 +1,38 @@
+@media (max-width: 700px){
+    .showcase{
+        min-height: 100vh;
+
+        h1{
+            margin-top: 30px;
+        }
+        nav{
+            flex-direction: column;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+
+            ul{
+                margin-top: 30px;
+            }
+        }
+        &-content{
+            text-align: center;
+
+            img {
+                display: none;
+            }
+            h1{
+                font-size: 35px;
+                width: 100%;
+            }
+            p{
+                margin-top: 30px;
+                font-size: 20px;
+                width: 100%;
+            }
+            %btn{
+                margin-top: 50px;
+            }
+        }
+    }
+}
