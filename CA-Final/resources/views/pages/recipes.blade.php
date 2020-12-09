@@ -11,68 +11,8 @@
     </div>
 </div>
 
-<main class="main">
+<main class="recipes">
     <div class="container">
-        <section class="popular">
-            <h2>Popular Recipes</h2>
-                <div class="popular-recipe-container">
-                    <div class="popular-recipe-box">
-                        <div class="popular-recipe-image">
-                            <img src="{{ asset('img/bread/amy-meegan-Jb2n5VQWiQo-unsplash.jpg') }}" alt="">
-                        </div>
-                            <div class="recipe-name">
-                                <h3>Lorem, ipsum dolor.</h3>
-                            </div>
-                                <div class="recipe-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. 
-                                        Reprehenderit quod, aperiam nesciunt ab maxime, magni architecto sint, 
-                                        culpa voluptatem placeat enim aspernatur libero iure ad facere quisquam 
-                                        mollitia dolorem odit.
-                                    </p>
-                                </div>
-                                <div class="recipe-link">
-                                    <a href="">See recipe</a>
-                                </div>
-                    </div>
-                    <div class="popular-recipe-box">
-                        <div class="popular-recipe-image">
-                            <img src="{{ asset('img/breakfast/alexandru-acea-Vk044I3w1gI-unsplash.jpg') }}" alt="">
-                        </div>
-                            <div class="recipe-name">
-                                <h3>Lorem, ipsum dolor.</h3>
-                            </div>
-                                <div class="recipe-description">
-                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                        Quidem officia corrupti quis labore eveniet, voluptatem nihil eos 
-                                        recusandae consectetur rerum cupiditate, ad modi fugiat illum eius voluptates,
-                                        reiciendis dolore. A.
-                                    </p>
-                                </div>
-                                    <div class="recipe-link">
-                                        <a href="">See recipe</a>
-                                    </div>
-                    </div>
-                    <div class="popular-recipe-box">
-                        <div class="popular-recipe-image">
-                            <img src="{{ asset('img/burger/amirali-mirhashemian-9hIJ4ZLMnZA-unsplash.jpg') }}" alt="">
-                        </div>
-                            <div class="recipe-name">
-                                <h3>Lorem ipsum dolor sit.</h3>
-                            </div>
-                                <div class="recipe-description">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-                                        Alias mollitia ut quasi distinctio, temporibus quaerat? 
-                                        Ullam exercitationem aliquid impedit nulla nobis, asperiores cumque corrupti. 
-                                        Numquam, id eos? Voluptatem, autem dolores.
-                                    </p>
-                                </div>
-                                    <div class="recipe-link">
-                                        <a href="">See recipe</a>
-                                    </div>
-                    </div>
-                </div>
-        </section>
-
         <section class="breakfast">
             <h2>Breakfast Recipes</h2>
                 <div class="recipe-container">
@@ -527,7 +467,6 @@
                     </div>
                 </div>
         </section>
-
     </div>
 </main>
 

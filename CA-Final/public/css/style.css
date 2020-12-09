@@ -43,7 +43,7 @@ section{
     position: fixed;
     top: 0;
     left: 0;
-    background: transparent;
+    background: var(--blue-transparent);
     z-index: 1500;
     transition: background .5s, height .5s;
 }

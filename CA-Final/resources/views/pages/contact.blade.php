@@ -4,7 +4,7 @@
 
 <main class="about">
     <div class="container">
-        About
+        Contact
     </div>
 </main>
 
