@@ -192,11 +192,12 @@ section{
     border-radius: 0.5rem;
     background: #f7f7f7;
     box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, .5);
-    transition: transform .5s;
+    transition: transform .5s, box-shadow .5s;
     cursor: pointer;
 }
 .popular-recipe-box:hover{
     transform: scale(1.02);
+    box-shadow: 3px 3px 1rem rgba(0, 0, 0, .5);
 }
 .popular-recipe-box .popular-recipe-image{
     height: 25rem;
@@ -233,11 +234,12 @@ section{
     background: #f7f7f7;
     box-shadow: 1px 1px 0.5rem rgba(0, 0, 0, .5);
     border-radius: 0.5rem;
-    transition: transform .5s;
+    transition: transform .5s, box-shadow .5s;
     cursor: pointer;
 }
 .recipe-box:hover{
     transform: scale(1.02);
+    box-shadow: 3px 3px 1rem rgba(0, 0, 0, .5);
 }
 .recipe-box .recipe-image{
     height: 25rem;
