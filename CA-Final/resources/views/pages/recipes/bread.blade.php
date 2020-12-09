@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<main class="bread">
+<main class="bread-page">
     <div class="container">
         <section class="bread">
             <h2>Bread Recipes</h2>

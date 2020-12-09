@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<main class="vegan">
+<main class="vegan-page">
     <div class="container">
         <section class="vegan">
             <h2>Burger Recipes</h2>

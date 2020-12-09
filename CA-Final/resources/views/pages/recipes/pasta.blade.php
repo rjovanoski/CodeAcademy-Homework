@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<main class="pasta">
+<main class="pasta-page">
     <div class="container">
         <section class="pasta">
             <h2>Pasta Recipes</h2>

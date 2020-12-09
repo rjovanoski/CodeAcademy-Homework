@@ -11,7 +11,7 @@
     </div>
 </div>
 
-<main class="burger">
+<main class="burger-page">
     <div class="container">
         <section class="burger">
             <h2>Burger Recipes</h2>

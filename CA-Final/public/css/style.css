@@ -6,8 +6,7 @@
     box-sizing: inherit;
 }
 :root{
-    --blue-solid:rgba(72,78,141,1);
-    --blue-transparent:rgba(72,78,141,.2);
+    --blue-solid:rgba(72,78,141,1);    
     --blue-transparent-alt: rgba(72, 78, 141, 0.5);
 }
 html{
@@ -31,7 +30,7 @@ section{
 }
 .container{
     width: 100%;
-    max-width: 140rem;
+    max-width: 130rem;
     padding: 0 1.5rem;
     margin: 0 auto;
 }
@@ -43,7 +42,7 @@ section{
     position: fixed;
     top: 0;
     left: 0;
-    background: var(--blue-transparent);
+    background: var(--blue-solid);
     z-index: 1500;
     transition: background .5s, height .5s;
 }
@@ -109,7 +108,11 @@ section{
     letter-spacing: 0.2rem;
     display: block;
     color: #ffffff;
-    padding: 1rem;
+    margin: 1rem 0;
+    transition: color .5s ease-in-out;
+}
+.nav-link:hover{
+    color: #45417c;
 }
 .hero{
     width: 100%;
@@ -155,23 +158,23 @@ section{
     align-items: center;
     text-align: center;
 }
-.main h2{
+.container h2{
     color: #262261;
     font-size: 2.5rem;
     text-transform: uppercase;
 }
-.main h3{
+.container h3{
     color: #262261;
     font-size: 2rem;
 }
-.main .recipe-name{
+.recipe-name{
     padding: 2rem 0;
     border-bottom: 1px solid #e2e2e2;
 }
-.main .recipe-description{        
+.recipe-description{        
     border-bottom: 1px solid #e2e2e2;
 }
-.main p{
+.container p{
     color: #262261;
     font-size: 1.4rem;
     margin: 2rem 0;
@@ -196,7 +199,7 @@ section{
     cursor: pointer;
 }
 .popular-recipe-box:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     box-shadow: 3px 3px 1rem rgba(0, 0, 0, .5);
 }
 .popular-recipe-box .popular-recipe-image{
@@ -238,10 +241,10 @@ section{
     cursor: pointer;
 }
 .recipe-box:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     box-shadow: 3px 3px 1rem rgba(0, 0, 0, .5);
 }
-.recipe-box .recipe-image{
+.recipe-image{
     height: 25rem;
     width: 100%;
     border-radius: 0.5rem 0.5rem 0 0;
@@ -252,8 +255,80 @@ section{
     object-fit: cover;
     border-radius: 0.5rem 0.5rem 0 0;
 }
-.recipes-box .recipe-link{
+.recipe-link{
     padding: 2rem 1rem;
+}
+.recipes-page{
+    padding: 10rem 0;
+}
+.recipes-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.breakfast-page{
+    padding: 10rem 0;
+}
+.breakfast-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.bread-page{
+    padding: 10rem 0;
+}
+.bread-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.burger-page{
+    padding: 10rem 0;
+}
+.burger-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.meat-page{
+    padding: 10rem 0;
+}
+.meat-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.pasta-page{
+    padding: 10rem 0;
+}
+.pasta-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.pizza-page{
+    padding: 10rem 0;
+}
+.pizza-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.soup-page{
+    padding: 10rem 0;
+}
+.soup-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
+}
+.vegan-page{
+    padding: 10rem 0;
+}
+.vegan-page .container{
+    margin: 0 auto;
+    align-items: center;
+    text-align: center;
 }
 @media screen and (min-width: 450px){
     .popular-recipe-box{
@@ -265,16 +340,14 @@ section{
     .popular-recipe-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        align-items: flex-start;
         grid-gap: 5rem;
     }
     .recipe-container{
         display: grid;
         grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
-        align-items: flex-start;
         grid-gap: 5rem;
     }
-    .main .recipe-description{
+    .recipe-description{
         height: 12rem;
     }
 }
@@ -283,7 +356,7 @@ section{
         height: 10rem;
     }
     .header.active{
-        height: 8rem;
+        height: 6rem;
     }
     .logo a{
         font-size: 2.5rem;
