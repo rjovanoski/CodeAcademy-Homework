@@ -28,4 +28,5 @@ Route::get('profile/recipes', 'RecipeController@index')->name('userRecipes');
 Route::get('profile/recipes/create', 'RecipeController@create')->name('create');
 Route::post('profile/recipes/store', 'RecipeController@store')->name('store');
 Route::get('profile/recipes/{recipe}/edit', 'RecipeController@edit')->name('edit');
-Route::post('profile/recipes/{recipe}/update', 'RecipeController@update')->name('update');
+Route::patch('profile/recipes/{recipe}/update', 'RecipeController@update')->name('update');
+Route::delete('profile/recipes/{recipe}/delete', 'RecipeController@destroy')->name('delete');

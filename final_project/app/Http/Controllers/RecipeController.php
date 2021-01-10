@@ -19,7 +19,19 @@ class RecipeController extends Controller
      */
     public function index()
     {
-        return view('profile.recipes.index');
+        $userId = Auth::id();
+
+        $breakfasts = Recipe::where('user_id', $userId)->where('type', '=', 'breakfast')->where('status', '=', 'approved')->get();
+        $breads = Recipe::where('user_id', $userId)->where('type', '=', 'bread')->where('status', '=', 'approved')->get();
+        $pastas = Recipe::where('user_id', $userId)->where('type', '=', 'pasta')->where('status', '=', 'approved')->get();
+        $meats = Recipe::where('user_id', $userId)->where('type', '=', 'meat')->where('status', '=', 'approved')->get();
+        $pizzas = Recipe::where('user_id', $userId)->where('type', '=', 'pizza')->where('status', '=', 'approved')->get();
+        $burgers = Recipe::where('user_id', $userId)->where('type', '=', 'burger')->where('status', '=', 'approved')->get();
+        $cakes = Recipe::where('user_id', $userId)->where('type', '=', 'cake')->where('status', '=', 'approved')->get();
+        $soups = Recipe::where('user_id', $userId)->where('type', '=', 'soup')->where('status', '=', 'approved')->get();
+        $vegans = Recipe::where('user_id', $userId)->where('type', '=', 'vegan')->where('status', '=', 'approved')->get();
+
+        return view('profile.recipes.index', compact('breakfasts', 'breads', 'meats', 'pastas', 'pizzas', 'cakes', 'burgers', 'soups', 'vegans'));
     }
 
     /**
@@ -94,8 +106,11 @@ class RecipeController extends Controller
      * @param  \App\Recipe  $recipe
      * @return \Illuminate\Http\Response
      */
-    public function edit(Recipe $recipe)
+    public function edit($id)
     {
+        $userId = Auth::id();
+
+        $recipe = Recipe::where('user_id', $userId)->where('status', '=', 'approved')->find($id); 
 
         return view('profile.recipes.edit', compact('recipe'));
     }

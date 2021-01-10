@@ -12,26 +12,28 @@
                 <div class="card-body">
                     <form method="POST" action="{{ route('store') }}" enctype="multipart/form-data">
                         @csrf
-                        <div class="image-preview" id="previewContainer">
-                            <img src="" alt="Image Preview" class="imageRecipe-preview">
-                            <span class="default-text">{{ __('Image Preview') }}</span>
-                        </div>
-                        <div class="row">
-                            <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}</label>
+                        <div class="image-container">
+                            <div class="image-preview" id="previewContainer">
+                                <img src="" alt="Image Preview" class="imageRecipe-preview">
+                                <span class="default-text">{{ __('Image Preview') }}</span>
+                            </div>
+                            <div class="row">
+                                <label for="image" class="col-md-4 col-form-label text-md-right">{{ __('Image') }}<small>*</small></label>
 
-                            <div class="col-md-6">
-                                <input id="image" type="file" class="form-control @error('image') is-invalid @enderror image-upload" name="image" value="{{ old('image') }}">
+                                <div class="col-md-6">
+                                    <input id="image" type="file" class="form-control @error('image') is-invalid @enderror image-upload" name="image" value="{{ old('image') }}">
 
-                                @error('image')
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $message }}</strong>
-                                    </span>
-                                @enderror
+                                    @error('image')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                    @enderror
+                                </div>
                             </div>
                         </div>
-
+                        <div class="input">
                         <div class="form-group row">
-                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
+                            <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}<small>*</small></label>
 
                             <div class="col-md-6">
                                 <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" autofocus>
@@ -45,7 +47,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}</label>
+                            <label for="type" class="col-md-4 col-form-label text-md-right">{{ __('Type') }}<small>*</small></label>
 
                             <div class="col-md-6">
                                 <select name="type" value="">
@@ -70,7 +72,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="ingredients" class="col-md-4 col-form-label text-md-right">{{ __('List of ingredients') }}</label>
+                            <label for="ingredients" class="col-md-4 col-form-label text-md-right">{{ __('List of ingredients') }}<small>*</small></label>
 
                             <div class="col-md-6">
                                 <textarea id="ingredients" type="text" class="form-control @error('ingredients') is-invalid @enderror" name="ingredients">{{ old('ingredients') }}</textarea>
@@ -84,7 +86,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="preparation_time" class="col-md-4 col-form-label text-md-right">{{ __('Preparation time in minutes') }}</label>
+                            <label for="preparation_time" class="col-md-4 col-form-label text-md-right">{{ __('Preparation time in minutes') }}<small>*</small></label>
 
                             <div class="col-md-6">
                                 <input id="preparation_time" type="text" class="form-control @error('preparation_time') is-invalid @enderror" name="preparation_time" value="{{ old('preparation_time') }}">
@@ -98,7 +100,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="preparation" class="col-md-4 col-form-label text-md-right">{{ __('Preparation') }}</label>
+                            <label for="preparation" class="col-md-4 col-form-label text-md-right">{{ __('Preparation') }}<small>*</small></label>
 
                             <div class="col-md-6">
                                 <textarea name="preparation" id="preparation" class="form-control @error('preparation') is-invalid @enderror" cols="30" rows="10">{{ old('preparation') }}</textarea>
@@ -112,7 +114,7 @@
                         </div>
 
                         <div class="form-group row">
-                            <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}</label>
+                            <label for="description" class="col-md-4 col-form-label text-md-right">{{ __('Description') }}<small>*</small></label>
 
                             <div class="col-md-6">
                                 <textarea name="description" id="description" class="form-control @error('description') is-invalid @enderror" cols="30" rows="10">{{ old('description') }}</textarea>
@@ -124,7 +126,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                        
                         <div class="form-group row mb-0">
                             <div class="col-md-6 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
@@ -132,6 +134,7 @@
                                 </button>
                             </div>
                         </div>
+                    </div>
                     </form>
                 </div>
             </div>
