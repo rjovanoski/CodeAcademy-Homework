@@ -23,5 +23,7 @@
     <main class="profile">
         @yield('content')
     </main>
+
+    @yield('script')
 </body>
 </html>

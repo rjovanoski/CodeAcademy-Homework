@@ -125,13 +125,53 @@ h3{
 .form-group{
     margin: 2rem 0;
 }
+.image-preview{
+    margin: 0 auto;
+    width: 15rem;
+    height: 15rem;
+    border: 0.2rem solid #7c4937;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: #8a8a8a;
+}
+.image-preview img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: none;
+}
 .card-body label{
     font-size: 1.3rem;
     color: #7c4937;
 }
-.card-body input{
+.row .image-upload{
+    font-size: 1.4rem;
+    background: white;
+    border-radius: 0.3rem;
     width: 100%;
-    height: 3rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem #7c4937;
+    outline: none;
+    margin-top: 1rem;
+    
+}
+::-webkit-file-upload-button{
+    color: white;
+    background: #7c4937;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.3rem 0 0 0.3rem;
+    box-shadow: 0.1rem 0 0.1rem 0.1rem #7c4937;
+    outline: none;
+    cursor: pointer;
+    transition: background .1s ease-in-out;
+}
+::-webkit-file-upload-button:hover{
+    background: #b98352;
+}
+.form-group input{
+    width: 100%;
     margin-top: 1rem;
     outline: none;
     padding: 1rem 0.5rem;
