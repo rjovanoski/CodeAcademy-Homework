@@ -110,7 +110,7 @@ toggle.addEventListener("click", function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /var/www/html/git_projects/CodeAcademy-Homework/final_project/resources/js/user.js */"./resources/js/user.js");
+module.exports = __webpack_require__(/*! F:\Git\CodeAcademy-Homework\final_project\resources\js\user.js */"./resources/js/user.js");
 
 
 /***/ })
