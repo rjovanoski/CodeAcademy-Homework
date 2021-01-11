@@ -23,6 +23,8 @@ Auth::routes();
 Route::get('/admin', 'AdminController@index')->name('admin');
 
 Route::get('/profile', 'HomeController@index')->name('profile');
+Route::get('/profile/{user}/edit', 'HomeController@edit')->name('userEdit');
+Route::patch('/profile/{user}/update', 'HomeController@update')->name('userUpdate');
 
 Route::get('profile/recipes', 'RecipeController@index')->name('userRecipes');
 Route::get('profile/recipes/create', 'RecipeController@create')->name('create');

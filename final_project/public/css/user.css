@@ -117,12 +117,37 @@ h3{
     border-radius: 0.5rem;
 }
 .card .card-header{
-    text-align: center;
+    text-align: left;
     padding: 1rem 0;
     border-bottom: 0.1rem solid #7c4937;
 }
+.card .avatar-container{
+    margin: 0 auto;
+    width: 10rem;
+    height: 10rem;
+    margin-top: 2rem;
+}
+.avatar-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
 .card-body{
     margin-top: 2rem;
+}
+.card-body .recipes{
+    padding-top: 2rem;
+    border-top: 0.1rem solid #f0f0f0;
+}
+.card-body .recipes a{
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    color: #ffffff;
+    font-size: 1.2rem;
+    background: #7c4937;
+    border-radius: .3rem;
+    margin-bottom: 1rem;
 }
 .form-group{
     margin: 1rem 0;
@@ -254,23 +279,35 @@ section{
     object-fit: cover;
     border-radius: .3rem .3rem 0 0;
 }
-.box-body{
-    padding: 2rem 1rem;    
+.box-title{
+    padding: 2rem 1rem;
+    border-bottom: 0.1rem solid #f0f0f0;
 }
-.box-body h5{
+.box-title h5{
     font-size: 1.5rem;
     color: #7c4937;
 }
-.box-body p{
+.box-body{
+    padding: 1rem 1rem;
+}
+.box-body .box-text{
+    padding: 0.5rem 0;
+}
+.box-text p{
     font-size: 1.2rem;
-    margin: 2rem 0;
-    padding: 2rem 0;
-    border-top: 0.2rem solid #f0f0f0;
-    border-bottom: 0.2rem solid #f0f0f0;
     color: #8a8a8a;
+    margin-bottom: 0.5rem;
+}
+.box-text span{
+    font-size: 1rem;
+    color: #7c4937;
     word-break: break-word;
 }
-.box-body a{
+.box-footer{
+    padding: 2rem 1rem;
+    border-top: 0.1rem solid #f0f0f0;
+}
+.box-footer a{
     display: inline-block;
     padding: 1rem 1.5rem;
     background: #7c4937;
@@ -280,34 +317,34 @@ section{
     text-transform: uppercase;
     transition: background .3s ease-in-out;
 }
-.box-body a:hover{
+.box-footer a:hover{
     background: #b98352;
 }
-.box-body .btn-danger{
+.box-footer .btn-danger{
     background: #be3f3f;
 }
-.box-body .btn-danger:hover{
+.box-footer .btn-danger:hover{
     background: #c25f5f;
 }
 .invalid-feedback{
     display: inline-block;
     color: #e02f2f;
-    font-size: 1.2rem;
+    font-size: 1rem;
     margin: 0.5rem 0;
 }
 @media screen and (min-width: 450px){
     .recipe-container{
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(35rem, 1fr));
         align-items: flex-start;
         grid-column-gap: 5rem; 
         grid-row-gap: 5rem;   
     }
     .box{
-        width: 30rem;
+        width: 35rem;
     }
     .box .image{
-        width: 30rem;
+        width: 35rem;
         height: 20rem;
     }
 }
@@ -394,13 +431,19 @@ section{
     .card button{
         font-size: 1.5rem;
     }
-    .box-body h5{
+    .box-title h5{
         font-size: 1.8rem;
     }
-    .box-body p{
-        font-size: 1.3rem;
+    .box-text p{
+        font-size: 1.4rem;
     }
-    .box-body a{
-        font-size: 1.3rem;
+    .box-text span{
+        font-size: 1.1rem;
+    }
+    .box-footer a{
+        font-size: 1.4rem;
+    }
+    .invalid-feedback{
+        font-size: 1.2rem;
     }
 }

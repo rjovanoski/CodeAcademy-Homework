@@ -24,7 +24,7 @@
                     </a>
                 </li>
                 <li class="dropdown-item">
-                    <a href="" class="dropdown-link">
+                    <a href="{{ route('userEdit',Auth::id()) }}" class="dropdown-link">
                         {{ __('Settings') }}
                     </a>
                 </li>

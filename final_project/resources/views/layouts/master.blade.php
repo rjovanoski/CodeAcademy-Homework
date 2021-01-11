@@ -21,12 +21,7 @@
     
     @include('includes.header')
       
-
-            @yield('content')
-
-
-    @include('includes.footer')
-
+        @yield('content')
 
 </body>
 </html>

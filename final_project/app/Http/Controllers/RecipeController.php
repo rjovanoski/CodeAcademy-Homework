@@ -56,7 +56,7 @@ class RecipeController extends Controller
 
         request()->validate([
             'name' => 'required|string|min:3',
-            'image' => 'required|image:jpg,jpeg,png',
+            'image' => 'required|image|mimes:jpeg,jpg,png',
             'type' => 'required',
             'ingredients' => 'required|string',
             'preparation_time' => 'required|integer',

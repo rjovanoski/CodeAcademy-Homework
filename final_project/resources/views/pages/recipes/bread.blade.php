@@ -22,4 +22,6 @@
     @endforeach
 </div>
 
+@include('includes.footer')
+
 @endsection

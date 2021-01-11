@@ -12,12 +12,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/breakfast/'.$breakfast->image) }}" alt="{{ $breakfast->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $breakfast->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $breakfast->name }}</h5>
-                            <p class="box-text">{{ $breakfast->preparation_time }}</p>
-                            <p class="box-text">{{ $breakfast->ingredients }}</p>
-                            <p class="box-text">{{ $breakfast->preparation }}</p>
-                            <p class="box-text">{{ $breakfast->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $breakfast->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $breakfast->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $breakfast->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $breakfast->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$breakfast->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$breakfast->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -37,12 +52,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/bread/'.$bread->image) }}" alt="{{ $bread->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $breakfast->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $bread->name }}</h5>
-                            <p class="box-text">{{ $bread->preparation_time }}</p>
-                            <p class="box-text">{{ $bread->ingredients }}</p>
-                            <p class="box-text">{{ $bread->preparation }}</p>
-                            <p class="box-text">{{ $bread->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $bread->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $bread->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $bread->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $bread->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$bread->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$bread->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -62,12 +92,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/burger/'.$burger->image) }}" alt="{{ $burger->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $burger->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $burger->name }}</h5>
-                            <p class="box-text">{{ $burger->preparation_time }}</p>
-                            <p class="box-text">{{ $burger->ingredients }}</p>
-                            <p class="box-text">{{ $burger->preparation }}</p>
-                            <p class="box-text">{{ $burger->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $burger->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $burger->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $burger->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $burger->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$burger->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$burger->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -85,14 +130,29 @@
                 @foreach($meats as $meat)
                     <div class="box">
                         <div class="image">
-                            <img src="{{ asset('storage/images/meat/'.$meat->image) }}" alt="{{ $meat->image }}">
+                            <img src="{{ asset('storage/images/meat/'.$burger->image) }}" alt="{{ $meat->image }}">
+                        </div>
+                        <div class="box-title">
+                            <h5>{{ $meat->name }}</h5>
                         </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $meat->name }}</h5>
-                            <p class="box-text">{{ $meat->preparation_time }}</p>
-                            <p class="box-text">{{ $meat->ingredients }}</p>
-                            <p class="box-text">{{ $meat->preparation }}</p>
-                            <p class="box-text">{{ $meat->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $meat->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $meat->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $meat->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $meat->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$meat->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$meat->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -112,12 +172,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/pasta/'.$pasta->image) }}" alt="{{ $pasta->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $pasta->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $pasta->name }}</h5>
-                            <p class="box-text">{{ $pasta->preparation_time }}</p>
-                            <p class="box-text">{{ $pasta->ingredients }}</p>
-                            <p class="box-text">{{ $pasta->preparation }}</p>
-                            <p class="box-text">{{ $pasta->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $pasta->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $pasta->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $pasta->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $pasta->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$pasta->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$pasta->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -137,12 +212,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/pizza/'.$pizza->image) }}" alt="{{ $pizza->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $pizza->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $pizza->name }}</h5>
-                            <p class="box-text">{{ $pizza->preparation_time }}</p>
-                            <p class="box-text">{{ $pizza->ingredients }}</p>
-                            <p class="box-text">{{ $pizza->preparation }}</p>
-                            <p class="box-text">{{ $pizza->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $pizza->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $pizza->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $pizza->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $pizza->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$pizza->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$pizza->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -162,12 +252,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/soup/'.$soup->image) }}" alt="{{ $soup->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $soup->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $soup->name }}</h5>
-                            <p class="box-text">{{ $soup->preparation_time }}</p>
-                            <p class="box-text">{{ $soup->ingredients }}</p>
-                            <p class="box-text">{{ $soup->preparation }}</p>
-                            <p class="box-text">{{ $soup->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $soup->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $soup->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $soup->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $soup->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$soup->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$soup->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -187,12 +292,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/vegan/'.$vegan->image) }}" alt="{{ $vegan->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $vegan->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $vegan->name }}</h5>
-                            <p class="box-text">{{ $vegan->preparation_time }}</p>
-                            <p class="box-text">{{ $vegan->ingredients }}</p>
-                            <p class="box-text">{{ $vegan->preparation }}</p>
-                            <p class="box-text">{{ $vegan->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $vegan->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $vegan->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $vegan->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $vegan->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$vegan->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$vegan->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
@@ -212,12 +332,27 @@
                         <div class="image">
                             <img src="{{ asset('storage/images/cake/'.$cake->image) }}" alt="{{ $cake->image }}">
                         </div>
+                        <div class="box-title">
+                            <h5>{{ $cake->name }}</h5>
+                        </div>
                         <div class="box-body">
-                            <h5 class="box-title">{{ $cake->name }}</h5>
-                            <p class="box-text">{{ $cake->preparation_time }}</p>
-                            <p class="box-text">{{ $cake->ingredients }}</p>
-                            <p class="box-text">{{ $cake->preparation }}</p>
-                            <p class="box-text">{{ $cake->description }}</p>
+                            <div class="box-text">
+                                <p>{{ __('Preparation time: ') }}<span>{{ $cake->preparation_time }} {{ __('minutes') }}</span></p>                                
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Ingredients: ') }}</p>
+                                <span>{{ $cake->ingredients }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Preparation: ') }}</p>
+                                <span>{{ $cake->preparation }}</span>
+                            </div>
+                            <div class="box-text">
+                                <p>{{ __('Description: ') }}</p>
+                                <span>{{ $cake->description }}</span>
+                            </div>
+                        </div>
+                        <div class="box-footer">
                             <a href="{{ route('edit',$cake->id) }}" class="btn btn-primary">{{ __('Update') }}</a>
                             <a href="{{ route('delete',$cake->id) }}" class="btn btn-danger">{{ __('Delete') }}</a>
                         </div>
